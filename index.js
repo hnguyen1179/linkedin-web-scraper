@@ -2,16 +2,11 @@ require("dotenv").config({ path: __dirname + "/.env" });
 const fs = require("fs");
 const puppeteer = require("puppeteer");
 
-const pastWeek =
+const PAST_WEEK_URL =
     "https://www.linkedin.com/jobs/search?keywords=%22Front%20End%22%20Developer%20OR%20%22Frontend%22%20Developer%20OR%20%22Front%20End%22%20Engineer%20OR%20%22Frontend%22%20Engineer&location=San%20Francisco%20Bay%20Area&locationId=&geoId=90000084&sortBy=R&f_TPR=r604800&f_E=1%2C2&position=1&pageNum=0";
 
-const pastMonth =
+const PAST_MONTH_URL =
     "https://www.linkedin.com/jobs/search/?f_E=1%2C2&f_TPR=r2592000&geoId=90000084&keywords=%22front%20end%22%20developer%20OR%20%22frontend%22%20developer%20OR%20%22front%20end%22%20engineer%20OR%20%22frontend%22%20engineer&location=San%20Francisco%20Bay%20Area&locationId=&sortBy=R";
-
-// Sign In ... Iterate through the pages; and on each page iteration, iterate through the list and scan the listings
-// Code for iterate through the pages...
-// document.querySelector(".artdeco-pagination__pages").childElementCount;
-// document.querySelector("button[aria-label="Page 1"]")
 
 // TO DO:
 /**
@@ -27,6 +22,15 @@ function grabPostingLinks() {
     ].map((li) => li.getAttribute("data-occludable-entity-urn"));
 }
 
+function grabConnectionLinks() {
+    return [
+        ...document.querySelectorAll(
+            ".entity-result__title-text a.app-aware-link"
+        ),
+    ].map((x) => x.getAttribute("href"));
+}
+
+// Signs into LinkedIn
 async function signIn(page) {
     const [signInLink] = await page.$x("/html/body/div[1]/header/nav/div/a[2]");
     await Promise.all([signInLink.click(), page.waitForNavigation()]);
@@ -40,6 +44,7 @@ async function signIn(page) {
     await Promise.all([signInButton.click(), page.waitForNavigation()]);
 }
 
+// Extracts all the relevant information from a job posting
 async function textExtractor() {
     function dateConverter(string) {
         if (/hour/.test(string)) {
@@ -98,11 +103,11 @@ function titleFilter(title) {
     return ![test1, test2].every((test) => test === true);
 }
 
-// Things to exclude:
-// #+ years
-// # years
-// #(non-zero) to # years
-// #(non-zero)-# years
+function getConnections() {
+    const link = document.querySelector(".app-aware-link").getAttribute("href");
+}
+
+// Filters job postings to exclude invalid job postings. Checks for years of experience required
 function experienceFilter(description) {
     const pattern = new RegExp(
         /\d+\+ years|\d+ years|[1-9] to [1-9] years|[1-9]-[1-9] years|[1-9]-[1-9] \+ years|[1-9] \+ years|years of experience|yrs of experience/i
@@ -114,7 +119,8 @@ function experienceFilter(description) {
     return !pattern.test(description);
 }
 
-async function scrapePostings(page, textExtractor) {
+// Main function that will iterate through pages and scrapes postings per page
+async function scrapePostings(browser, page, textExtractor) {
     const validPostings = [];
 
     // ----------------- repaste into original code after done
@@ -142,7 +148,9 @@ async function scrapePostings(page, textExtractor) {
 
     // 2. Iterate through the postings and extract information from each
     for (let id of postingsLinks) {
-        // 2aa. Check to see if the posting title includes 'front', etc. If no, skip
+        const listingObj = {};
+
+        // 2a. Check to see if the posting title includes 'front', etc. If no, skip
         const jobTitle = await page.evaluate((id) => {
             return document.querySelector(
                 `li[data-occludable-entity-urn='${id}'] .job-card-list__title`
@@ -155,17 +163,71 @@ async function scrapePostings(page, textExtractor) {
 
         const postingClickDelay = Math.floor(Math.random() * 500) + 300;
 
-        // 2a. Click on each individual li element within the ul job postings
+        // 2b. Click on each individual li element within the ul job postings
         await Promise.all([
             page.click(`li[data-occludable-entity-urn='${id}']`),
             page.waitForNavigation(),
+            page.waitForTimeout(3000),
         ]);
 
-        // 2b. Extract the information from each link; this can be separate function to grab the title, body, etc within a single function
+        // 2c. Check to see if listing has any connections via aA or hR
+        const availableAlumni = await page.evaluate(() =>
+            document.querySelector(".app-aware-link").getAttribute("href")
+        );
+
+        if (/search/.test(availableAlumni)) {
+            // Opens a new tab
+            const newPage = await browser.newPage();
+
+            // Grabs the link to your connections
+            const connectionsPageLink = await page.evaluate(() =>
+                document.querySelector(".app-aware-link").getAttribute("href")
+            );
+
+            // Go to the link provided in the new tab
+            await Promise.all([
+                newPage.setViewport({ width: 1440, height: 1000 }),
+                newPage.goto(connectionsPageLink),
+                newPage.waitForNavigation(),
+            ]);
+
+            const connectionsList = await newPage.evaluate(grabConnectionLinks);
+
+            const validConnections = connectionsList.filter(async (link) => {
+                const newPageProfile = await browser.newPage();
+
+                await Promise.all([
+                    newPageProfile.setViewport({
+                        width: 1440,
+                        height: 1000,
+                    }),
+                    newPageProfile.goto(link),
+                    newPageProfile.waitForNavigation(),
+                    newPageProfile.waitForTimeout(3000),
+                ]);
+
+                const textData = await newPageProfile.evaluate(
+                    () =>
+                        document.querySelector("section.education-section")
+                            .innerText
+                );
+
+                newPageProfile.close();
+
+                return /app academy|appacademy|hackreactor|hack reactor/i.test(
+                    textData
+                );
+            });
+
+            listingObj["connections"] = validConnections;
+            newPage.close();
+        }
+
+        // 2d. Extract the information from each link; this can be separate function to grab the title, body, etc within a single function
         const [company, title, location, datePosted, url, description] =
             await page.evaluate(textExtractor);
 
-        // 2c. Run a regex on the extracted text to decide whether you should filter it into the final validPostings
+        // 2e. Run a regex on the extracted text to decide whether you should filter it into the final validPostings
         if (experienceFilter(description)) {
             validPostings.push({
                 company,
@@ -174,10 +236,13 @@ async function scrapePostings(page, textExtractor) {
                 datePosted,
                 title,
                 url,
+                ...listingObj,
             });
         }
 
-        // 2d. Run a wait timer in order to prevent a 429 error
+        console.log(company);
+
+        // 2f. Run a wait timer in order to prevent a 429 error
         await page.waitForTimeout(postingClickDelay);
     }
     // -----------------
@@ -294,14 +359,14 @@ async function scrapePostings(page, textExtractor) {
 
     await Promise.all([
         page.setViewport({ width: 1440, height: 1000 }),
-        page.goto(pastMonth),
+        page.goto(PAST_MONTH_URL),
     ]);
 
     // Signing in
     await signIn(page);
 
     // Scrape
-    const validPostings = await scrapePostings(page, textExtractor);
+    const validPostings = await scrapePostings(browser, page, textExtractor);
     console.log("validPostings: ", validPostings);
 
     const formattedPostings = validPostings.map((post) => {
