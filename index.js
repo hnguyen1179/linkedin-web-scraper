@@ -10,9 +10,7 @@ const PAST_MONTH_URL =
 
 // TO DO:
 /**
- * 1. Rewrite this project into TypeScript?
- * 2. Make it jump through the pages?
- * 3. Add more filters?
+ * 1. MAKE LOOKING THROUGH CONNECTIONS WORK; ITS NOT HITTING A CERTAIN PART ON LINE 214
  */
 
 // Will filter the UL list to only include postings that meet your requirement
@@ -167,7 +165,7 @@ async function scrapePostings(browser, page, textExtractor) {
         await Promise.all([
             page.click(`li[data-occludable-entity-urn='${id}']`),
             page.waitForNavigation(),
-            page.waitForTimeout(3000),
+            page.waitForTimeout(4000),
         ]);
 
         // 2c. Check to see if listing has any connections via aA or hR
@@ -193,32 +191,46 @@ async function scrapePostings(browser, page, textExtractor) {
 
             const connectionsList = await newPage.evaluate(grabConnectionLinks);
 
-            const validConnections = connectionsList.filter(async (link) => {
-                const newPageProfile = await browser.newPage();
+            const validConnections = connectionsList.filter(
+                async (link, idx) => {
+                    console.log(
+                        "Looping through available connections... ",
+                        idx
+                    );
+                    const newPageProfile = await browser.newPage();
 
-                await Promise.all([
-                    newPageProfile.setViewport({
-                        width: 1440,
-                        height: 1000,
-                    }),
-                    newPageProfile.goto(link),
-                    newPageProfile.waitForNavigation(),
-                    newPageProfile.waitForTimeout(3000),
-                ]);
+                    await Promise.all([
+                        newPageProfile.setViewport({
+                            width: 1440,
+                            height: 1000,
+                        }),
+                        newPageProfile.goto(link),
+                        newPageProfile.waitForNavigation({
+                            waitUntil: "networkidle0",
+                        }),
+                        newPageProfile.waitForTimeout(3000),
+                    ]);
 
-                const textData = await newPageProfile.evaluate(
-                    () =>
-                        document.querySelector("section.education-section")
-                            .innerText
-                );
+                    // ITS NOT HITTING THIS PORTION??? IDK WHY??
+                    console.log("Analyzing text data of connection");
+                    const textData = await newPageProfile.evaluate(
+                        () =>
+                            document.querySelector("section.education-section")
+                                .innerText
+                    );
 
-                newPageProfile.close();
+                    console.log(textData);
 
-                return /app academy|appacademy|hackreactor|hack reactor/i.test(
-                    textData
-                );
-            });
+                    console.log("Closing new profile page");
+                    newPageProfile.close();
 
+                    return /app academy|appacademy|hackreactor|hack reactor/i.test(
+                        textData
+                    );
+                }
+            );
+
+            console.log("Adding into listingObject and closing newPage");
             listingObj["connections"] = validConnections;
             newPage.close();
         }
