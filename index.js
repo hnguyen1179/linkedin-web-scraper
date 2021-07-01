@@ -113,10 +113,22 @@ function experienceFilter(description) {
         /\d+\+ years|\d+ years|[1-9] to [1-9] years|[1-9]-[1-9] years|[1-9]-[1-9] \+ years|[1-9] \+ years|years of experience|yrs of experience/i
     );
 
-    // Should go through the text, and if the description contains any of the
-    // above; it should return FALSE
-    // If the job passes, it should return TRUE
-    return !pattern.test(description);
+    const metMinimum = !pattern.test(description);
+    let minimumYears = 0;
+
+    if (!metMinimum) {
+        const yearsPattern = new RegExp(
+            /(\d+)\+ years|(\d+) years|([1-9]) to [1-9] years|([1-9])-[1-9] years|([1-9])-[1-9] \+ years|([1-9]) \+ years|(\d+).+years/i
+        );
+        console.log(description.match(yearsPattern));
+        const [yearsMin] = [...description.match(yearsPattern)].filter(
+            (match) => match && match.length == 1
+        );
+
+        minimumYears = parseInt(yearsMin);
+    }
+
+    return [metMinimum, minimumYears];
 }
 
 function scrollToBottom() {
@@ -211,7 +223,8 @@ async function scrapePostings(browser, page, textExtractor) {
 
     //     // 2f. Push into valid postings
     //     validPostings.push({
-    //         experienceMet: experienceFilter(description) ? "yes" : "no",
+    //         experienceMet: experienceFilter(description)[0] ? "yes" : "no",
+    //         experienceRequired: experienceFilter(description)[1],
     //         company,
     //         title,
     //         location,
@@ -294,7 +307,10 @@ async function scrapePostings(browser, page, textExtractor) {
 
                 // 2f. Push into valid postings
                 validPostings.push({
-                    experienceMet: experienceFilter(description) ? "yes" : "no",
+                    experienceMet: experienceFilter(description)[0]
+                        ? "yes"
+                        : "no",
+                    experienceRequired: experienceFilter(description)[1],
                     company,
                     title,
                     location,
@@ -358,6 +374,7 @@ async function scrapePostings(browser, page, textExtractor) {
     const formattedPostings = validPostings.map((post) => {
         const {
             experienceMet,
+            experienceRequired,
             company,
             title,
             location,
@@ -366,7 +383,7 @@ async function scrapePostings(browser, page, textExtractor) {
             connections,
         } = post;
 
-        return `${experienceMet}\t${company}\t${title}\t${location}\t${datePosted}\t${url}\t${connections}`;
+        return `${experienceMet}\t${experienceRequired}\t${company}\t${title}\t${location}\t${datePosted}\t${url}\t${connections}`;
     });
 
     // Print Results
