@@ -92,9 +92,9 @@ async function textExtractor() {
 }
 
 function titleFilter(title) {
-    const test1 = /front|ui|web/i.test(title);
+    const test1 = /front|ui|web developer/i.test(title);
     const test2 =
-        !/senior|sr|lead|mid|angular|vue|ii|iii|years|java[^s]|full/i.test(
+        !/senior|staff|sr|lead|mid|angular|vue|ii|iii|years|java[^s]|full/i.test(
             title
         );
 
@@ -140,186 +140,198 @@ async function scrapePostings(browser, page, textExtractor) {
     const validPostings = [];
 
     // ----------------- repaste into original code after done
-    const postingsLinks = await page.evaluate(grabPostingLinks);
-    console.log(postingsLinks);
+    // const postingsLinks = await page.evaluate(grabPostingLinks);
+    // console.log(postingsLinks);
 
-    // 1a. Scrolling to the bottom in order to preload all the titles
-    await page.evaluate(scrollToBottom);
-    await page.waitForTimeout(Math.random() * 500 + 1000);
+    // // 1a. Scrolling to the bottom in order to preload all the titles
+    // await page.evaluate(scrollToBottom);
+    // await page.waitForTimeout(Math.random() * 500 + 1000);
 
-    // 2. Iterate through the postings and extract information from each
-    for (let id of postingsLinks) {
-        // 2a. Check to see if the posting title includes 'front', etc. If no, skip
-        const jobTitle = await page.evaluate((id) => {
-            return document.querySelector(
-                `li[data-occludable-entity-urn='${id}'] .job-card-list__title`
-            ).innerText;
-        }, id);
+    // // 2. Iterate through the postings and extract information from each
+    // for (let id of postingsLinks) {
+    //     // 2a. Check to see if the posting title includes 'front', etc. If no, skip
+    //     const jobTitle = await page.evaluate((id) => {
+    //         return document.querySelector(
+    //             `li[data-occludable-entity-urn='${id}'] .job-card-list__title`
+    //         ).innerText;
+    //     }, id);
 
-        if (titleFilter(jobTitle)) {
-            continue;
-        }
+    //     if (titleFilter(jobTitle)) {
+    //         continue;
+    //     }
 
-        const postingClickDelay = Math.floor(Math.random() * 500) + 300;
+    //     const postingClickDelay = Math.floor(Math.random() * 600) + 500;
 
-        // 2b. Click on each individual li element within the ul job postings
-        await Promise.all([
-            page.click(`li[data-occludable-entity-urn='${id}']`),
-            page.waitForNavigation(),
-        ]);
+    //     // 2b. Click on each individual li element within the ul job postings
+    //     await Promise.all([
+    //         page.click(`li[data-occludable-entity-urn='${id}']`),
+    //         page.waitForNavigation(),
+    //         page.waitForTimeout(400),
+    //         page.waitForSelector(".mt5.mb2", { visible: true }),
+    //     ]);
 
-        // 2c. Extract the information from each link; this can be separate function to grab the title, body, etc within a single function
-        const [company, title, location, datePosted, url, description] =
-            await page.evaluate(textExtractor);
+    //     // 2c. Extract the information from each link; this can be separate function to grab the title, body, etc within a single function
+    //     const [company, title, location, datePosted, url, description] =
+    //         await page.evaluate(textExtractor);
 
-        // 2d. Run a regex on the extracted text to decide whether you should filter it into the final validPostings
-        // if (experienceFilter(description)) {
-        // 2da. If it passes the filter, check for available alumni connections
-        const availableAlumni = await page.evaluate(() => {
-            return (
-                /people/.test(document.querySelector(".mt5.mb2").innerHTML) &&
-                [...document.querySelectorAll(".mt5.mb2 .app-aware-link")]
-                    .map((x) => x.getAttribute("href"))
-                    .filter((x) => /schoolFilter/.test(x)).length > 0
-            );
-        });
+    //     // 2d. Run a regex on the extracted text to decide whether you should filter it into the final validPostings
 
-        let availableConnections = [];
-        if (availableAlumni) {
-            console.log("Alumni are available...");
-            const [connectionsLink] = await page.evaluate(getConnectionsLink);
-            // Opens a new tab
-            const newPage = await browser.newPage();
+    //     // 2e. Check for available alumnis
+    //     const availableAlumni = await page.evaluate(() => {
+    //         return (
+    //             /people/.test(document.querySelector(".mt5.mb2").innerHTML) &&
+    //             [...document.querySelectorAll(".mt5.mb2 .app-aware-link")]
+    //                 .map((x) => x.getAttribute("href"))
+    //                 .filter((x) => /schoolFilter/.test(x)).length > 0
+    //         );
+    //     });
 
-            // Go to the link provided in the new tab
-            await Promise.all([
-                newPage.setViewport({ width: 1440, height: 1000 }),
-                newPage.goto(connectionsLink),
-                newPage.waitForNavigation(),
-            ]);
+    //     let availableConnections = [];
+    //     if (availableAlumni) {
+    //         const [connectionsLink] = await page.evaluate(getConnectionsLink);
 
-            availableConnections = await newPage.evaluate(grabConnectionLinks);
+    //         // Opens a new tab
+    //         const newPage = await browser.newPage();
 
-            newPage.close();
-        }
+    //         // Go to the link provided in the new tab
+    //         await Promise.all([
+    //             newPage.setViewport({ width: 1440, height: 1000 }),
+    //             newPage.goto(connectionsLink),
+    //             newPage.waitForNavigation(),
+    //             newPage.waitForSelector(
+    //                 ".reusable-search__entity-results-list"
+    //             ),
+    //             { visible: true },
+    //         ]);
 
-        // 2db. Push into valid postings
-        validPostings.push({
-            company,
-            title,
-            location,
-            datePosted,
-            url,
-            availableConnections,
-        });
-        // }
+    //         availableConnections = await newPage.evaluate(grabConnectionLinks);
 
-        console.log(company);
+    //         newPage.close();
+    //     }
 
-        // 2f. Run a wait timer in order to prevent a 429 error
-        await page.waitForTimeout(postingClickDelay);
-    }
+    //     // 2f. Push into valid postings
+    //     validPostings.push({
+    //         experienceMet: experienceFilter(description) ? "yes" : "no",
+    //         company,
+    //         title,
+    //         location,
+    //         datePosted,
+    //         url,
+    //         availableConnections,
+    //     });
+
+    //     // 2g. Run a wait timer in order to prevent a 429 error
+    //     await page.waitForTimeout(postingClickDelay);
+    // }
     // -----------------
 
-    // try {
-    //     let nextPage = 1;
-    //     let checkCondition = await page.evaluate((nextPage) => {
-    //         return document.querySelector(
-    //             `button[aria-label="Page ${nextPage}"]`
-    //         );
-    //     }, nextPage);
+    try {
+        let nextPage = 1;
+        let checkCondition = await page.evaluate((nextPage) => {
+            return document.querySelector(
+                `button[aria-label="Page ${nextPage}"]`
+            );
+        }, nextPage);
 
-    //     // Each loop will click through a new page
-    //     while (checkCondition) {
-    //         // Now you want to filter the list of ul job postings via grabPostingLinks
-    //         // 1. Grab all of the li > div > a's href attributes into an array
-    //         const postingsLinks = await page.evaluate(grabPostingLinks);
-    //         console.log(postingsLinks);
+        // Each loop will click through a new page
+        while (checkCondition) {
+            // Now you want to filter the list of ul job postings via grabPostingLinks
+            // 1. Grab all of the li > div > a's href attributes into an array
+            // ---------------------------------------------------------------------------
+            const postingsLinks = await page.evaluate(grabPostingLinks);
 
-    //         // 1a. Scrolling to the bottom in order to preload all the titles
-    //         await page.evaluate(() => {
-    //             const scrollable = document.querySelector(
-    //                 ".jobs-search-results.display-flex.flex-column"
-    //             );
+            // 1a. Scrolling to the bottom in order to preload all the titles
+            await page.evaluate(scrollToBottom);
+            await page.waitForTimeout(Math.random() * 500 + 1000);
 
-    //             const heightToScroll = document.querySelector(
-    //                 ".jobs-search-results__list.list-style-none"
-    //             ).offsetHeight;
+            console.log(postingsLinks);
+            // 2. Iterate through the postings and extract information from each
+            for (let id of postingsLinks) {
+                console.log("Looking at: ", id);
+                // 2a. Check to see if the posting title includes 'front', etc. If no, skip
+                const jobTitle = await page.evaluate((id) => {
+                    return document.querySelector(
+                        `li[data-occludable-entity-urn='${id}'] .job-card-list__title`
+                    ).innerText;
+                }, id);
 
-    //             scrollable.scrollTo({
-    //                 left: 0,
-    //                 top: heightToScroll,
-    //                 behavior: "smooth",
-    //             });
-    //         });
+                if (titleFilter(jobTitle)) {
+                    continue;
+                }
 
-    //         await page.waitForTimeout(Math.random() * 500 + 1000);
+                const postingClickDelay = Math.floor(Math.random() * 600) + 500;
 
-    //         // 2. Iterate through the postings and extract information from each
-    //         for (let id of postingsLinks) {
-    //             // 2aa. Check to see if the posting title includes 'front', etc. If no, skip
-    //             const jobTitle = await page.evaluate((id) => {
-    //                 return document.querySelector(
-    //                     `li[data-occludable-entity-urn='${id}'] .job-card-list__title`
-    //                 ).innerText;
-    //             }, id);
+                // 2b. Click on each individual li element within the ul job postings
+                await Promise.all([
+                    page.click(`li[data-occludable-entity-urn='${id}']`),
+                    page.waitForNavigation(),
+                    page.waitForSelector(".mt5.mb2", { visible: true }),
+                ]);
 
-    //             if (titleFilter(jobTitle)) {
-    //                 continue;
-    //             }
+                await page.waitForTimeout(500);
 
-    //             const postingClickDelay = Math.floor(Math.random() * 500) + 300;
+                // 2c. Extract the information from each link; this can be separate function to grab the title, body, etc within a single function
+                const [company, title, location, datePosted, url, description] =
+                    await page.evaluate(textExtractor);
 
-    //             // 2a. Click on each individual li element within the ul job postings
-    //             await Promise.all([
-    //                 page.click(`li[data-occludable-entity-urn='${id}']`),
-    //                 page.waitForNavigation(),
-    //             ]);
+                // 2d. Run a regex on the extracted text to decide whether you should filter it into the final validPostings
 
-    //             // 2b. Extract the information from each link; this can be separate function to grab the title, body, etc within a single function
-    //             const [company, title, location, datePosted, url, description] =
-    //                 await page.evaluate(textExtractor);
+                // 2e. Check for available alumnis
+                const availableAlumni = await page.evaluate(() => {
+                    return (
+                        /people/.test(
+                            document.querySelector(".mt5.mb2").innerHTML
+                        ) &&
+                        [
+                            ...document.querySelectorAll(
+                                ".mt5.mb2 .app-aware-link"
+                            ),
+                        ]
+                            .map((x) => x.getAttribute("href"))
+                            .filter((x) => /schoolFilter/.test(x)).length > 0
+                    );
+                });
 
-    //             // 2c. Run a regex on the extracted text to decide whether you should filter it into the final validPostings
-    //             if (experienceFilter(description)) {
-    //                 validPostings.push({
-    //                     company,
-    //                     title,
-    //                     location,
-    //                     datePosted,
-    //                     title,
-    //                     url,
-    //                 });
-    //             }
+                // 2f. Push into valid postings
+                validPostings.push({
+                    experienceMet: experienceFilter(description) ? "yes" : "no",
+                    company,
+                    title,
+                    location,
+                    datePosted,
+                    url,
+                    connections: availableAlumni ? "yes" : "no",
+                });
 
-    //             // 2d. Run a wait timer in order to prevent a 429 error
-    //             await page.waitForTimeout(postingClickDelay);
-    //         }
+                // 2g. Run a wait timer in order to prevent a 429 error
+                await page.waitForTimeout(postingClickDelay);
+            }
+            // ---------------------------------------------------------------------------
 
-    //         // 3. Reset the checkCondition
-    //         nextPage++;
-    //         checkCondition = await page.evaluate((nextPage) => {
-    //             return document.querySelector(
-    //                 `button[aria-label="Page ${nextPage}"]`
-    //             );
-    //         }, nextPage);
+            // 3. Reset the checkCondition
+            nextPage++;
+            checkCondition = await page.evaluate((nextPage) => {
+                return document.querySelector(
+                    `button[aria-label="Page ${nextPage}"]`
+                );
+            }, nextPage);
 
-    //         // 4. Jump to the next page
-    //         if (checkCondition) {
-    //             const nextPageClickDelay =
-    //                 Math.floor(Math.random() * 1000) + 500;
+            // 4. Jump to the next page
+            if (checkCondition) {
+                const nextPageClickDelay =
+                    Math.floor(Math.random() * 1000) + 500;
 
-    //             await Promise.all([
-    //                 page.click(`button[aria-label="Page ${nextPage}"]`),
-    //                 page.waitForNavigation(),
-    //                 page.waitForTimeout(nextPageClickDelay),
-    //             ]);
-    //         }
-    //     }
-    // } catch (e) {
-    //     // Do something with error
-    //     console.log(e);
-    // }
+                await Promise.all([
+                    page.click(`button[aria-label="Page ${nextPage}"]`),
+                    page.waitForNavigation(),
+                    page.waitForTimeout(nextPageClickDelay),
+                ]);
+            }
+        }
+    } catch (e) {
+        // Do something with error
+        console.log(e);
+    }
 
     return validPostings;
 }
@@ -333,7 +345,7 @@ async function scrapePostings(browser, page, textExtractor) {
 
     await Promise.all([
         page.setViewport({ width: 1440, height: 1000 }),
-        page.goto(PAST_MONTH_URL),
+        page.goto(PAST_WEEK_URL),
     ]);
 
     // Signing in
@@ -345,19 +357,17 @@ async function scrapePostings(browser, page, textExtractor) {
 
     const formattedPostings = validPostings.map((post) => {
         const {
+            experienceMet,
             company,
             title,
             location,
             datePosted,
             url,
-            availableConnections,
+            connections,
         } = post;
 
-        return `${company}\t${title}\t${location}\t${datePosted}\t${url}\t${availableConnections.join(
-            "\t"
-        )}`;
+        return `${experienceMet}\t${company}\t${title}\t${location}\t${datePosted}\t${url}\t${connections}`;
     });
-    console.log("formattedPostings: ", formattedPostings);
 
     // Print Results
     fs.writeFile("./output.txt", formattedPostings.join("\n"), (e) => {
