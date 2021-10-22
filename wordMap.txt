@@ -1,0 +1,5056 @@
+2	1
+3	3
+5	1
+6	2
+8	1
+9	1
+10	2
+12	1
+18	1
+19	1
+24	1
+50	1
+120	1
+150	1
+500	2
+2012	1
+2021	1
+5000	1
+Job	2
+Description	1
+
+Remote
+
+This	1
+position	10
+is	133
+offered	1
+for	152
+remote	12
+work	42
+from	36
+home.
+
+This	1
+remote,	1
+where	15
+you	65
+will	42
+home,	1
+and	583
+may	6
+require	3
+to	359
+occasionally	2
+commute	1
+one	14
+of	257
+our	115
+offices	6
+in	175
+person	2
+engagement	2
+activities	3
+such	12
+as	65
+team	58
+meetings,	2
+training	2
+culture	8
+events.	1
+We’re	1
+proud	6
+offer	7
+flexibility,	2
+so	10
+candidates	4
+be	76
+considered	1
+who	21
+live	2
+near	1
+any	19
+Synchrony	3
+hubs	1
+including:	1
+Alpharetta,	1
+GA,	1
+Chicago,	1
+IL,	1
+Costa	1
+Mesa,	1
+CA,	2
+Stamford,	1
+CT,	1
+New	5
+York,	1
+NY,	1
+Altamonte	1
+Springs,	1
+FL,	1
+Charlotte,	1
+NC,	1
+Dayton,	1
+OH,	1
+St.	1
+Paul,	1
+MN	1
+or	87
+Phoenix,	1
+AZ.
+
+About	1
+Loop	2
+Commerce
+
+Acquired	1
+by	49
+June	1
+2018,	1
+GiftNow	1
+a	225
+transformative	2
+force	1
+the	297
++$500	1
+billion	3
+Gift-Commerce	1
+category.	1
+Based	1
+San	12
+Francisco	9
+Bay	1
+area,	1
+we	66
+are	75
+leading	4
+revolution	1
+US	1
+gift	8
+giving	2
+market.	1
+Our	17
+Gift	1
+Experience	3
+Management	1
+Platform	1
+(GXM)	1
+being	5
+leveraged	1
+many	3
+brands	1
+(Michael	1
+Kors	1
+,	5
+Uniqlo,	1
+Coach,	1
+Kate	1
+Spade	1
+more),	1
+continuing	1
+growth	14
+partnering	1
+with	162
+influential	1
+retailers,	1
+platforms,	3
+solution	2
+providers	1
+change	3
+way	3
+gifting	4
+done	1
+turning	1
+online	6
+gifts	1
+into	11
+memorable	1
+experiences.
+
+Companies	1
+that	86
+leverage	1
+GXM	3
+platform	19
+have	43
+learned	1
+experiences	14
+can	23
+transform	2
+critical	7
+business	17
+like	9
+sales,	3
+employee	7
+incentives,	1
+trade	1
+shows,	1
+events	3
+more.	1
+Whether	2
+they	13
+sending	1
+customers,	2
+solutions	8
+help	25
+create	13
+campaign	1
+generates	1
+goodwill	1
+loyalty.	1
+With	1
+expanded	1
+card	4
+capability,	1
+businesses	3
+modern	11
+elegant	1
+experience	36
+personalization	1
+design	24
+options	2
+delight	1
+customers	9
+improve	6
+redemption.	1
+also	10
+delivers	1
+patented	1
+product	29
+experience,	2
+GiftNow®.	1
+This	8
+digital	6
+makes	4
+virtually	1
+giftable	1
+contactless	1
+exchange	1
+capability	1
+ensures	1
+receipt	1
+perfect	4
+every	16
+time.
+
+We	1
+define	3
+vibrant	1
+family-like	1
+fun-loving	1
+atmosphere,	1
+agile,	2
+focused	5
+on	79
+defining	1
+edge	1
+something	3
+meaningful	4
+millions	8
+people.	1
+And	6
+now,	1
+while	5
+maintaining	4
+start-up	2
+fast-pace	1
+innovation,	2
+backing	1
+support	11
+fuel	1
+accelerate	2
+success".
+
+Essential	1
+Responsibilities
+
+Work	1
+architecture,	2
+development	22
+user	19
+facing	4
+components	8
+product.
+Collaborate	1
+designers,	11
+managers	3
+other	31
+members	11
+modern,	3
+elegant,	1
+innovative	5
+delightful	1
+experiences
+Contribute	1
+overall	2
+engineering	19
+UX	6
+excellence	1
+best	11
+practices
+Drive	1
+technology	15
+forward,	1
+innovate	1
+evolve	1
+it	14
+respect	2
+functionality,	1
+performance,	2
+reliability,	1
+scalability
+Implement	1
+working	30
+prototypes	2
+testing	6
+new	21
+ideas
+Participate	1
+contribute	2
+code	15
+reviews	4
+producing	1
+quality	16
+code
+Perform	1
+duties	1
+and/or	5
+special	2
+projects	9
+assigned
+
+Qualifications/Requirements
+
+A	1
+minimum	4
+years	33
+deep	6
+hand-coded	1
+JavaScript,	8
+including	19
+programming	2
+patterns	5
+(client	1
+side	3
+MVC,	1
+JSONP,	1
+dynamic	3
+resource	1
+loading	1
+etc.)
+A	1
+years’	2
+high	14
+proficiency	2
+cross-browser	2
+HTML	2
+CSS,	8
+latest	1
+HTML5/CSS3	1
+features.
+A	1
+writing	4
+modular,	2
+well-abstracted,	1
+reusable	8
+client	10
+server-side	3
+UI	10
+components
+
+Desired	1
+Characteristics
+
+Bachelor’s	1
+degree	5
+Computer	3
+Science	4
+Related	1
+technical	12
+field
+Start-up	1
+experience,
+Strong	1
+analytical	1
+skills	5
+–	6
+ability	7
+understand	7
+constraints	2
+problem	2
+identify	2
+tradeoffs.
+Familiarity	1
+using	16
+Ruby/Java/PHP/etc.
+Passion	1
+opportunities	9
+has	16
+its	4
+retailers	3
+&	17
+partners
+Outstanding	1
+analyze,	1
+troubleshoot	1
+solve	6
+complex	10
+problems.
+Outstanding	1
+communications,	1
+relationship	1
+building,	1
+collaboration	4
+skills.
+Proven	1
+partner	4
+communicate	2
+effectively	2
+all	17
+levels	1
+organization
+
+Eligibility	1
+Requirements
+
+You	1
+must	15
+older
+You	1
+school	3
+diploma	1
+equivalent
+You	1
+willing	1
+take	9
+drug	1
+test,	2
+submit	2
+background	1
+investigation	1
+fingerprints	1
+part	8
+onboarding	3
+process
+You	1
+able	12
+satisfy	1
+requirements	6
+Section	1
+Federal	1
+Deposit	1
+Insurance	1
+Act.
+New	1
+hires	1
+(Level	1
+4-7)	1
+months	1
+continuous	2
+service	2
+company	23
+before	4
+eligible	3
+post	3
+roles.	2
+Once	2
+this	20
+hire	5
+time	13
+requirement	1
+met,	1
+associate	1
+months’	2
+future	5
+non-exempt	1
+Employees,	1
+level	3
+greater,	1
+at	39
+least	5
+post.	1
+All	3
+internal	5
+employees	12
+“consistently	1
+meets	1
+expectations”	1
+performance	14
+rating	1
+approval	2
+your	39
+manager	2
+(or	2
+HR	3
+if	10
+don’t	3
+meet	6
+requirement).
+
+Legal	1
+authorization	1
+U.S.	2
+required.	1
+We	50
+not	24
+sponsor	2
+individuals	7
+employment	6
+visas,	1
+now	3
+future,	1
+job	12
+opening.
+
+All	1
+qualified	6
+applicants	6
+receive	3
+consideration	2
+without	7
+regard	3
+race,	10
+color,	10
+religion,	10
+sex,	5
+sexual	11
+orientation,	10
+gender	11
+identity,	5
+national	10
+origin,	9
+disability,	7
+veteran	9
+status.
+
+Reasonable	1
+Accommodation	1
+Notice
+
+Federal	1
+law	2
+requires	4
+employers	1
+provide	14
+reasonable	7
+accommodation	7
+disabilities.	1
+Please	2
+tell	1
+us	22
+apply	8
+perform	4
+job.	1
+Examples	1
+include	3
+making	5
+application	9
+process	4
+procedures,	1
+providing	7
+documents	1
+an	50
+alternate	1
+format,	1
+sign	1
+language	4
+interpreter,	1
+specialized	1
+equipment.
+If	1
+need	6
+accommodations,	1
+please	5
+call	2
+Career	1
+Support	1
+Line	1
+discuss	1
+specific	1
+situation.	1
+reached	1
+1-866-301-5627.	1
+Representatives	1
+available	5
+8am	1
+5pm	1
+Monday	1
+Friday,	1
+Central	1
+Standard	2
+Time.
+
+Grade/Level:	1
+10
+
+Job	1
+Family	1
+Group
+
+Information	1
+Technology	6
+Posted	6
+
+Daiki	1
+Moriyama
+
+Co-founder	1
+CEO	1
+Whole	1
+Earth	1
+Foundation	1
+|	4
+Ex-BCG	1
+Ex-Deloitte	1
+|
+
+Send	1
+InMail
+
+About	1
+Role
+
+We	2
+looking	14
+results-driven,	1
+motivated	2
+frontend	12
+developer	2
+passionate	5
+about	14
+creating	5
+professional	3
+applications	9
+big	2
+impact	7
+society	2
+blockchain	1
+gamification.	1
+The	21
+receives	1
+lead	2
+major	2
+features,	2
+return	1
+responsible	4
+taking	6
+active	1
+ownership	4
+assigned	1
+features	12
+delivering	4
+quality.	1
+still	1
+small,	1
+eager-to-learn	1
+eager-to-help.
+
+
+
+
+Responsibilities
+
+Develop	1
+user-facing	5
+features
+Write	1
+clear,	2
+extendable	1
+code
+Build	1
+reusable,	2
+DRY	1
+developers	5
+quickly	4
+review	2
+understand
+Weigh	1
+feasibility	3
+UI/UX	7
+designs
+Communicate	1
+clearly	2
+efficiently	2
+over	6
+text,	2
+video	4
+person
+Agile	1
+driven
+
+
+
+
+Skills	1
+Experience
+
+3+	1
+startup	1
+environment
+3+	1
+relevant	3
+front-end	10
+development
+Strong	1
+both	8
+practical	2
+implement	2
+novel	1
+challenging	2
+features
+Experience	1
+framework	1
+(Vue.js)
+Highly	1
+HTML,	7
+Javascript,	1
+Git
+Experience	1
+Mapbox	1
+GIS	1
+plus
+
+
+
+
+Position	1
+based	14
+downtown	1
+Redwood	1
+City,	1
+right	4
+Caltrain	1
+station.	1
+consider	5
+exceptional	7
+locations	1
+work.	5
+email	1
+resume,	1
+cover	1
+letter	1
+(optional)	1
+links	1
+public	1
+(encouraged)	1
+kmomose@wholeearthfoundation.org	1
+Expected	1
+compensation:	1
+$85.00	1
+-	12
+$103.00	1
+per	4
+hour	1
+
+HireArt	1
+helping	4
+world’s	1
+fastest-growing	2
+rideshare	1
+find	7
+Front	5
+End	6
+Engineer	7
+architecture	9
+needs.	1
+ideal	1
+candidate	9
+9+	1
+software	33
+industry	5
+experience.
+
+You	1
+build	34
+own	6
+web	26
+advanced	2
+Typescript,	4
+React,	9
+desire	2
+achieve	4
+fidelity,	1
+usability,	1
+accessibility,	4
+across	14
+desktop	1
+mobile	4
+browsers.
+
+As	1
+Engineer,	4
+You	15
+Will
+
+Help	1
+needs.
+Write	1
+well-crafted,	1
+well-tested,	1
+readable,	2
+maintainable	2
+code.
+Participate	1
+ensure	9
+distribute	1
+knowledge.
+Participate	1
+feature	2
+experts.
+Unblock,	1
+support,	2
+teams	9
+results.
+Ability	1
+operate	2
+independently	2
+designing,	2
+implementing,	1
+testing.
+Act	1
+feedback	3
+learn	2
+grow.
+
+Requirements
+
+9+	1
+experience
+5+	1
+full-stack	2
+Node,	1
+React
+Familiar	1
+SQL
+Excellent	1
+listener	1
+communicator
+Passionate	1
+tools	29
+establish	1
+tight	1
+loops
+
+Commitment:	1
+full-time	4
+(40	1
+hours	4
+week),	1
+6-month	1
+contract	1
+staffed	1
+via	1
+HireArt.	1
+role	10
+fully	9
+open	6
+U.S.-based	1
+candidates.
+
+HireArt	1
+values	3
+diversity	6
+Equal	4
+Opportunity	4
+Employer.	1
+interested	4
+United	4
+States.	2
+Unfortunately,	1
+visas	1
+corp-to-corp.
+
+	1
+About	5
+Meter	3
+
+Meter	1
+developing	7
+next-generation	2
+volumetric	6
+imaging	4
+technology.	3
+building	36
+machine	5
+see	3
+inside	2
+anything	4
+cloud-based	2
+processing	2
+complex,	3
+data	10
+produces.	2
+give	4
+engineers,	7
+eventually	2
+medical	6
+practitioners	2
+more	17
+confidence	4
+their	26
+processes	3
+lower	2
+barrier	2
+inspection	3
+tools.
+
+Our	2
+engineers	8
+includes	4
+world-class	3
+researchers,	2
+industrial	2
+PhDs,	2
+founders	2
+successful	4
+startups,	3
+zero	3
+egos.	2
+backed	5
+some	3
+top	8
+venture	2
+capital	3
+funds	2
+angel	2
+investors	3
+Silicon	8
+Valley	7
+beyond.	2
+headquartered	2
+Cambridge,	2
+MA	2
+office	8
+Francisco,	3
+CA.
+
+About	2
+Meter
+
+Meter	1
+Role
+
+Meter’s	1
+visualizer	2
+hugely	1
+important	6
+product.	1
+It’s	3
+primary	3
+channel	1
+through	16
+which	7
+access,	2
+view,	1
+interact	2
+data.	1
+By	1
+combining	1
+frameworks	8
+WebGL-based	1
+imaging,	1
+we’re	6
+deliver	9
+were	2
+previously	2
+only	5
+clunky,	1
+expensive,	1
+OS-specific	1
+applications.
+
+The	1
+written	5
+primarily	2
+Typescript	3
+few	5
+compiled	1
+C++/WebAssembly	1
+packages	1
+computation	1
+prefer	1
+browser.	1
+For	2
+3D	2
+graphics	1
+lean	1
+VTK.js	1
+Three.js,	2
+backend	9
+relies	1
+simple	2
+Node.js	2
+server	1
+Postgres	1
+database.	1
+expect	1
+familiarity	1
+these	5
+technologies,	2
+but	9
+eagerness	1
+engage	1
+them	8
+huge	2
+plus.
+
+If	1
+joining	2
+well-funded	1
+stage	2
+opportunity	17
+become	3
+team.
+
+The	1
+Role
+
+Build	1
+user-friendly	2
+utilizing	1
+WebGL
+Work	1
+closely	4
+scientists
+Create	1
+concepts,	1
+ideas,	1
+platforms
+Communicate	1
+document	1
+architectural	2
+decisions
+
+You
+
+Have	1
+designed	2
+implemented	1
+throughout	2
+lifecycle,	1
+napkin	1
+sketches	1
+shipping	1
+maintenance
+Have	1
+worked	1
+software
+Are	1
+apps
+Can	1
+rapidly	3
+develop	5
+elements	3
+designers	4
+engineers
+
+Bonus	1
+Points	1
+For
+
+Previous	1
+manufacturing	1
+technologies
+A	1
+portfolio	1
+previous	1
+share
+
+This	1
+located	1
+Meter’s	2
+office.	1
+required	3
+travel	2
+Boston	1
+office,	1
+depending	4
+local,	1
+state	4
+federal	1
+regulations	2
+recommendations	1
+pertaining	1
+COVID-19.
+
+Meter	1
+offers	3
+competitive	6
+cash	2
+equity	4
+compensation.	1
+generous	1
+vacation	6
+policy	4
+well	8
+paid	7
+parental	4
+leave,	1
+health,	3
+dental,	9
+vision,	3
+retirement	2
+commuter	1
+benefits.
+
+In	1
+keeping	1
+beliefs	1
+goals,	1
+no	3
+applicant	2
+face	1
+discrimination	3
+harassment	2
+on:	1
+ancestry,	3
+age,	9
+gender,	5
+marital	4
+domestic	3
+status,	17
+disability	4
+status.	1
+Above	1
+beyond	1
+“protected	1
+categories,”	1
+strives	2
+prevent	2
+other,	1
+subtler	1
+forms	1
+inappropriate	1
+behavior	1
+ever	1
+gaining	1
+foothold	1
+company.	3
+blatant	1
+hidden,	1
+barriers	1
+success	4
+place	4
+Meter.
+
+Reach	1
+out	9
+want	5
+what	8
+building.
+
+San	1
+Applicants:	1
+Review	1
+Fair	2
+Chance	2
+Ordinance	1
+guidelines	1
+applicable	6
+area.
+
+	1
+Who	1
+Postclick?	1
+
+
+
+
+As	1
+global	7
+leader	4
+advertising	3
+conversion,	1
+mission	11
+automate	2
+conversion	2
+dynamically	1
+post-click	1
+scale	1
+thought	1
+impossible.	1
+two	4
+impactful	1
+products	8
+Instapage	1
+SMB’s	1
+Postclick	2
+Advertising	1
+Cloud	1
+enterprise	6
+market.
+
+
+
+
+Our	1
+diverse	10
+made	1
+up	9
+innovators	2
+seek	1
+push	1
+hard!	1
+people-first	1
+tech	7
+SOMA	1
+area	1
+Austin,	1
+Texas,	1
+Timişoara,	1
+Romania,	1
+Warsaw,	1
+Poland,	2
+Bialystok,	1
+employees.
+
+
+
+
+As	1
+Postclicker,	1
+treat	1
+everyone	4
+respect,	1
+love	4
+jobs,	1
+even	7
+Mondays	1
+strive	4
+buckets	1
+fun!	1
+Here	1
+bit	1
+believe!
+
+
+
+
+A	1
+day	3
+life…
+
+Develop	1
++	2
+Node.js
+Release	1
+behind	1
+flags
+You	1
+get	12
+excited	1
+clean,	1
+testable,	2
+well-documented	1
+code
+Do	1
+developer’s	1
+pull	2
+requests
+Help	1
+proper	1
+monitoring	1
+platforms
+The	1
+stack
+
+
+
+
+We	1
+would	6
+hear	2
+most	8
+these…
+
+An	1
+undergraduate	1
+equivalent	7
+experience
+3+	2
+development
+3+	1
+Angular,	2
+React	8
+Vue.js	1
+frameworks
+3+	1
+markup,	2
+CSS
+Experience	1
+moving	2
+environment
+Experience	1
+unit/integration	1
+tests
+A	1
+passion	3
+efficient	2
+problems
+Experience	1
+accountable	1
+non-functional	1
+requirements,	1
+quality,	3
+defects	2
+make	17
+production,	1
+root-cause	1
+analysis	1
+incidents	2
+particular	1
+area
+
+
+
+
+Next	1
+Steps!
+
+If	1
+sounds	1
+you,	4
+can’t	1
+wait	1
+but,	1
+there	4
+significant	2
+thing	3
+out.	1
+equal	9
+employer	4
+searches	1
+outstanding	1
+people	17
+backgrounds,	2
+experiences,	3
+abilities,	1
+perspectives.	2
+care	2
+each	5
+inclusive	6
+environment	9
+come	8
+day,	4
+Mondays!	1
+We'd	1
+happy	2
+accommodations	2
+apply.
+
+
+
+
+Some	1
+amazing	4
+benefits	5
+include...
+
+15	1
+Days	1
+standard	1
+PTO
+10	1
+Paid	3
+holidays
+12	1
+Mental	1
+health	4
+PTO	4
+days
+Paid	1
+sick	1
+leave
+Generous	1
+monthly	2
+WFH	1
+Stipend	1
+plus	3
+set	3
+allowance
+Flexible	1
+hours.
+Full	1
+(medical,	1
+vision)
+401(K)
+Top-of-the-line	1
+technology.
+Professional	1
+growth/continuing	1
+education	4
+(conferences,	1
+workshops,	1
+certifications,	1
+etc.)
+Your	1
+choice	1
+location	1
+WFH,	1
+hybrid	2
+office/WFH	1
+schedule	1
+daily	3
+once	1
+it’s	2
+completely	1
+safe.
+Ranked	1
+#16	1
+SF	2
+customer	5
+satisfaction	1
+happiness
+
+
+
+
+Under	1
+Ordinance,	1
+employment-qualified	1
+arrest	1
+conviction	1
+records.
+
+
+
+
+**We	1
+cannot	1
+sponsorship	1
+Ascendify	2
+full	7
+join	8
+team. 	1
+As	8
+link	2
+between	5
+user. 	1
+detail-oriented	1
+great	9
+communication	7
+skills. 	1
+enjoy	4
+basis	9
+familiar	1
+fast-paced,	2
+agile	3
+cycle.	2
+You’re	1
+always	5
+grow	3
+skill	2
+challenge	1
+yourself	1
+things.	1
+
+A	1
+remotely	6
+during	1
+core	5
+Pacific	1
+Time	3
+hours. 	1
+They	2
+productive	1
+direct	1
+supervision. 	1
+legally	5
+States	2
+sponsorship. 	1
+Candidates	2
+outside	1
+apply.
+
+
+
+
+Responsibilities
+
+Develop	1
+scalable	2
+secure	3
+single	3
+page	12
+ES6,	3
+React.js	3
+Redux
+Build	1
+maintain	3
+Storybook	1
+library
+Ensure	1
+designs
+Collaborate	1
+project	6
+Agile/Scrum	1
+environment
+Maintain	1
+prior	1
+stack	5
+Backbone.js/PHP
+
+
+
+
+Skills	1
+Qualifications
+
+2+	1
+HTML5,	3
+CSS3,	1
+SASS	1
+experience
+1+	1
+Redux
+Experience	1
+CSS	7
+preprocessors	1
+(SASS)
+Experience	1
+RESTful	3
+API	4
+architecture
+Proficient	1
+responsive	3
+cross-browser/cross-device	1
+compatibility	2
+issues
+Experience	1
+unit	2
+tests	1
+(Jest/Mocha/Enzyme)
+Experience	1
+jQuery	2
+Bootstrap
+Experience	1
+Babel,	2
+Gulp,	1
+Webpack	1
+Git/Source	1
+Tree
+Excellent	1
+skills
+
+
+
+
+Bonus	1
+Skills
+
+Basic	1
+knowledge	6
+understanding	10
+back-end	2
+technologies	3
+(Linux/SSH	1
+CLI,	1
+PHP,	1
+SQL,	1
+AWS)
+Experience	1
+Material	1
+UI
+Experience	1
+Docker
+
+
+
+
+Benefits
+
+Work-from-Home	1
+(we	2
+recently	1
+transitioned	1
+100%	5
+company)
+Rapid	1
+career	7
+opportunities
+Competitive	1
+salary	2
+stock	1
+option	1
+package
+Medical,	1
+dental	4
+vision	9
+coverage
+Paid	1
+maternity	1
+paternity	1
+leave
+401K	1
+healthcare	1
+flex	1
+spending	1
+accounts
+Unlimited	1
+PTO
+This	1
+starts	2
+contractor,	1
+after	1
+90-day	1
+review,	1
+moves	1
+benefits.
+
+ 
+
+About	1
+Us
+
+Ascendify	1
+growing,	1
+Valley,	1
+venture-backed	1
+operating	1
+That	2
+means	4
+work-from-home	1
+local	4
+WeWork)	1
+here	2
+Most	1
+regionally	1
+surrounding	1
+bay	1
+area.	1
+talent	3
+acquisition	1
+large,	1
+companies.	1
+Ascendify’s	1
+leverages	1
+artificial	1
+intelligence	2
+companies	14
+attract,	1
+select	1
+onboard	1
+talent.	1
+was	1
+founded	1
+won	1
+Executive's	1
+Top	1
+Product	1
+Year.	1
+Nuro	4
+
+Nuro	1
+exists	2
+better	11
+everyday	2
+life	4
+robotics.	1
+elite	1
+entrepreneurs	1
+scientists.	1
+believe	7
+AI	11
+robotics	2
+cusp	1
+transforming	1
+dedicated	3
+Join	4
+play	1
+mission.
+
+About	1
+Role
+
+The	1
+Evaluation	1
+Introspection	1
+Tools	1
+builds	1
+infrastructure	3
+tooling	6
+autonomy	4
+system	6
+level.	1
+streamlined	1
+introspection	1
+used	7
+operations	3
+visualize	3
+debug	2
+complicated	1
+driving	1
+behavior;	1
+universal	1
+evaluation	1
+informed	1
+decisions	3
+when	5
+track	3
+long	4
+term	1
+progress;	1
+pipelines	1
+crawl	1
+massive	2
+amounts	3
+on-road	1
+simulation	1
+produce	2
+insights	2
+inform	1
+company-level	1
+decisions.
+
+Our	1
+diverse,	1
+ranging	2
+product-minded	1
+large	3
+scale,	2
+data-focused	1
+distributed	3
+systems.	1
+collaborate	4
+Product,	1
+Autonomy,	1
+Systems,	1
+Data	3
+Science,	1
+Infrastructure	1
+teams,	1
+underlying	1
+focus	3
+answering	2
+questions	5
+advance	3
+system.
+
+About	1
+Work
+
+Design	1
+powerful	5
+extensible	1
+applications.
+Solve	1
+cutting-edge	1
+visualization	4
+challenges	4
+autonomy.
+Build	1
+end	7
+systems	7
+render	1
+sensor	1
+(lidar,	1
+camera,	1
+etc.)	1
+model	2
+output.
+
+About	1
+You
+
+You’ve	1
+developed	1
+JavaScript	13
+/	2
+TypeScript,	2
+Python,	1
+C++.
+You	1
+expertise	5
+fluency	1
+either	2
+WebGL,	1
+WASM.
+You	1
+clear	3
+concise	1
+communicator.
+You	1
+minded	1
+powerful,	1
+usable,	1
+applications.
+You	1
+hold	1
+Bachelor’s	1
+Master’s	2
+Degree	2
+computer	2
+science,	1
+engineering,	3
+related	5
+field,	1
+experience.
+
+At	1
+Nuro,	1
+celebrate	1
+differences	1
+committed	6
+workplace	5
+fosters	1
+inclusion	4
+psychological	1
+safety	3
+employees.	1
+expressly	1
+prohibits	1
+form	2
+identity	3
+expression,	5
+genetic	3
+information,	3
+protected	10
+characteristics.
+
+You	1
+vaccinated	1
+against	2
+COVID-19	1
+date	1
+start	2
+role.	1
+Proof	1
+vaccination	1
+date.	1
+requests	1
+medical,	6
+religious,	1
+grounds	1
+candidates.	1
+
+Bobby	1
+Kim
+
+Client	1
+Relations	1
+Director	1
+Skyrocket	2
+Ventures
+
+Send	1
+InMail
+
+Front	1
+$250k	2
+Social	1
+Good	1
+Startup
+
+
+
+
+Location: The	1
+York	2
+City	1
+Francisco. As	1
+typical	2
+days,	1
+until	1
+pandemic	2
+subsides. After	1
+subsides	1
+could	5
+prefer.
+
+
+
+
+
+
+
+The	1
+company's	2
+realms	1
+housing,	2
+real	3
+estate,	1
+SaaS. Their	1
+consumers	1
+b2b. It	1
+web. The	1
+democratizing	2
+access	2
+seeks	2
+positive	3
+social	3
+product.
+
+
+
+
+The	1
+employees,	1
+seed	1
+funded,	1
+much	3
+mature	1
+financially	1
+strong	7
+than	5
+startups	3
+size. It	1
+already	4
+dollars	2
+revenue	1
+pipeline. Right	1
+Head	1
+Engineering	3
+been	2
+doing	2
+front	7
+himself,	1
+main	1
+bottleneck	1
+waiting	1
+quickly. So	1
+someone	2
+engineering.
+
+
+
+
+The	1
+pay	1
+very	3
+(up	2
+experience)	2
+(about	1
+1%	1
+take,	1
+lucrative	1
+since	3
+seeking	2
+dollar	1
+pace	1
+within	3
+next	3
+years.
+
+
+
+
+
+
+
+Job	1
+Responsibilities:
+
+
+
+
+-	1
+Primarily	1
+React.
+
+
+
+
+-	2
+ideally	1
+end,	3
+preference	1
+50%	1
+backend.
+
+
+
+
+-	1
+Taking	2
+product's	1
+interfaces.
+
+
+
+
+-	1
+Overhauling	1
+interface	1
+optimize	3
+speed	4
+ease	1
+use.
+
+
+
+
+-	1
+Getting	1
+less	1
+minutes	1
+end-to-end	3
+completion.
+
+
+
+
+-	1
+Working	1
+Product/Design	1
+true	3
+self-service	1
+end.
+
+
+
+
+-	1
+initiative	1
+improvements	2
+features.
+
+
+
+
+
+
+
+Qualifications:
+
+
+
+
+-	1
+At	4
+yeares	1
+experience.
+
+
+
+
+-	3
+A	3
+Bachelor's	1
+solving	4
+problems	6
+directly	2
+people,	2
+society.
+
+
+
+
+-	1
+Uncompromising	1
+moral	1
+integrity.
+
+
+
+
+
+
+
+Nice	1
+have:
+
+
+
+
+-	1
+Expertise	1
+Startup	1
+tier	1
+companies.
+
+
+
+
+
+
+
+
+
+
+About	1
+Ventures
+
+
+
+
+
+
+
+Skyrocket	1
+Ventures	1
+recruiting	3
+firm	3
+hundreds	3
+range	2
+leaders	1
+top-tier	1
+startups. This	1
+permanent	1
+hire. Please	1
+authorized	1
+U.S.
+
+
+
+
+
+
+
+Please	1
+note	1
+match,	1
+encourage	4
+ballpark. Companies	1
+often	2
+flexible	2
+hiring	9
+do	12
+perfectly	1
+fit	5
+description,	1
+qualifications	1
+good	3
+general.
+
+
+
+
+
+
+
+Most	1
+jobs	3
+posted	1
+online,	1
+know	5
+match	1
+interests	1
+qualifications,	2
+then	4
+touch	1
+us.
+
+
+
+
+
+
+
+After	1
+posting,	1
+we’ll	2
+potential	3
+matches	1
+companies. If	1
+matches,	1
+share	6
+resume	1
+those	4
+contact	4
+interview	2
+you.
+
+
+
+
+
+
+
+Thank	1
+wish	2
+search!	1
+
+Riffat	1
+Jaffer	1
+2nd
+
+Head	1
+Talent	1
+People
+
+Send	1
+InMail
+
+Vision
+
+Robust	1
+Intelligence's	1
+eliminate	3
+Risk.	1
+transition	1
+world	15
+adopting	1
+automated	1
+decision	3
+processes,	2
+inherit	1
+deal	1
+risk.	2
+drift,	1
+misclassified	1
+data,	1
+prediction	1
+biases,	1
+adversarial	1
+input	3
+easily	4
+distorts	1
+outputs	1
+detrimental	1
+effects.	1
+flagship	1
+built	3
+integrated	3
+existing	3
+risks.
+
+
+
+
+Advancing	1
+collaborative	7
+unusually	1
+varied	1
+To	4
+multidisciplinary	1
+increasingly	2
+backgrounds.	2
+Together,	1
+we're	4
+secure,	1
+trustworthy	2
+AI.
+
+
+
+
+Robust	1
+Intelligence	1
+towards	1
+deploy	1
+AI,	1
+securely.	1
+forefront	2
+that's	3
+needed	7
+win	1
+security	4
+gap.	1
+We're	2
+creative,	1
+engineer	7
+founding	2
+member	3
+Robust	1
+Intelligence.	1
+You'll	4
+drive	7
+day-to-day	1
+acceleration	1
+shape	3
+looks	1
+company.
+
+
+
+
+As	1
+Frontend	7
+Software	3
+will:
+
+Develop	1
+central	1
+platform
+Work	1
+integrate	1
+endpoints	1
+UI.
+Develop	1
+move	1
+incorporating	2
+products
+Manage	1
+individual	4
+projects,	1
+priorities,	1
+deadlines.
+Collaborate	1
+heavily	1
+development.
+
+
+
+
+You	1
+enjoy:
+
+Creating	1
+beautiful	3
+prototyping	1
+experiences.
+Quickly	1
+iterating	1
+feedback.
+Collaborating	1
+outcomes	1
+forward	1
+together.
+
+
+
+
+What	1
+offer
+
+We	1
+contribution	1
+shaping	1
+AI.	1
+effort	2
+impossibly	1
+talented	1
+mission.	2
+biggest	3
+asset	1
+community	2
+key	3
+succeeding	1
+In	3
+addition	2
+goal	5
+offer:
+
+
+
+
+-	1
+Competitive	1
+salary,	1
+equity
+
+-	1
+Market-leading	1
+insurance	3
+dependents
+
+-	1
+Flexible	1
+Off	1
+Policy	1
+Parental/Family	1
+Leave
+
+-	1
+Education	1
+reimbursement	2
+program	6
+Individual	1
+Learning
+
+-	1
+401(k)	2
+Retirement	1
+plan
+
+-	1
+Commuter	1
+benefits
+
+-	1
+Company	2
+lunches,	1
+dinners,	1
+kitchens	2
+stocked	4
+snacks	2
+drinks
+
+-	1
+On-site	1
+gym	3
+wellness	1
+program
+
+
+
+
+Get	1
+visiting	1
+Life	1
+RI	1
+page:	1
+https://www.linkedin.com/company/robust-intelligence/life/get-to-know-us/?viewAsMember=true	1
+
+Toptal	1
+efficiency	2
+highest	2
+client’s	1
+business,	1
+ready	3
+exciting	3
+Fortune	2
+rates	1
+hassles.	1
+If	8
+career,	1
+enhance	1
+set,	1
+connections	1
+around	8
+globe,	3
+Toptal	3
+you.
+
+About	1
+Toptal
+
+Toptal	1
+exclusive	2
+network	8
+freelancers	1
+world.	1
+projects.	1
+networks	1
+empowers	4
+freelance	3
+developers,	1
+finance	1
+experts,	3
+managers,	4
+worldwide	1
+excel	1
+careers.
+
+Toptal	1
+clients	3
+vary	3
+sizes	1
+industries,	3
+organizations	2
+renowned	1
+universities.	1
+enter	1
+network,	1
+matchers	1
+preferences.	1
+experts	2
+countries	3
+ambitions.
+
+About	1
+Front-End	3
+Web	2
+Developer	2
+combine	1
+art	2
+programming.	1
+Your	1
+responsibilities	1
+might	1
+from:	1
+(1)	1
+(2)	1
+libraries	4
+use,	1
+(3)	1
+designs,	1
+(4)	1
+maximum	1
+scalability,	1
+(5)	1
+assure	1
+validated	1
+submitting	1
+back-end,	1
+(6)	1
+stakeholders.
+
+Requirements
+
+3+	1
+development
+Proficient	1
+CSS3
+Basic	1
+pre-processing	1
+LESS	1
+SASS
+Proficient	1
+client-side	1
+scripting	1
+frameworks,	2
+jQuery
+Good	1
+asynchronous	1
+request	1
+handling,	1
+partial	1
+updates,	1
+AJAX
+Basic	1
+image	4
+authoring	1
+tools,	2
+crop,	1
+resize,	1
+small	7
+adjustments	1
+image.	1
+Familiarity	1
+Gimp	1
+Photoshop	1
+plus.
+Proficient	1
+issues	3
+ways	3
+them.
+Proficient	1
+versioning	1
+tools
+Experience	2
+advantage.
+Experience	1
+advantage
+Full-time	1
+availability	1
+advantage
+
+If	1
+you’re	2
+pursuing	1
+engaging	5
+clients,	2
+step	1
+clicking	1
+filling	2
+short	2
+started.
+
+#RemoteJobFrontEnd
+
+	1
+Subspace	14
+dedicated,	2
+tomorrow’s	2
+internet	4
+today.	4
+From	3
+mission-critical	2
+real-time	6
+in-network	4
+applications,	3
+helps	4
+possible	5
+experiences.	3
+
+While	2
+multiplayer	2
+games	2
+use	10
+voice,	2
+video,	2
+applications.
+
+As	2
+company,	4
+hyper-focused	2
+tomorrow	2
+reality	2
+VCs	2
+(Lux	2
+Capital,	2
+Telstra,	2
+01	2
+Advisors)	2
+run	2
+former	2
+executives	2
+Riot	2
+Games,	2
+King,	2
+Avaya.	2
+raise	2
+bar,	2
+add	3
+culture,	2
+bring	5
+positivity,	2
+enthusiasm,	2
+pride	2
+building.	2
+exhibit	2
+curiosity,	2
+proactive	2
+nature,	2
+genuinely	2
+challenges,	2
+keen	3
+sense	2
+urgency.	2
+Subspace,	2
+millisecond	2
+counts.
+
+Subspace	2
+disciplined,	2
+organization	3
+enough	2
+contributors	2
+broad	3
+substantial	2
+influence.	2
+Every	5
+contributes	2
+use.	2
+well-engineered	3
+well-behaved	2
+systems,	2
+aiming	2
+comprehensive	2
+interfaces,	2
+instrumentation.	2
+investing	2
+practices	5
+speeds	2
+decision-making	2
+context	2
+iterate	3
+quickly.
+
+We're	2
+anchor	2
+interface.	2
+design,	11
+user's	2
+visual	6
+website,	2
+console,	2
+external	3
+graph	2
+network.
+
+What	2
+Be	2
+Doing
+
+Building	2
+Console,	2
+impacting	2
+experience
+Developing	2
+interfaces
+Helping	2
+users	6
+data
+Influencing	2
+information	5
+Console
+
+What	2
+Bring	2
+Table
+
+Experience	2
+Javascript	3
+Typescript
+4+	2
+engineering
+Experience	2
+Redux,	2
+Query/Axios,	2
+Webpack,	2
+Styled	2
+Components	3
+(CSS-in-JS).
+A	2
+bar	2
+experience
+Experience	3
+testing
+Responsive	2
+exposure,	2
+competence
+
+Subspace's	2
+momentous	2
+software-defined	2
+universally	2
+impactful.	2
+serve	4
+representative	2
+serve.	2
+embrace	2
+accelerated	2
+approach	4
+comfortable	3
+bringing	5
+full,	2
+authentic	3
+selves	3
+fostering	2
+perspectives	3
+thrive;	2
+value	5
+pillar	2
+success.	2
+
+Alexis	1
+Robbins
+
+Talent	1
+@	1
+Merge	1
+I'm	1
+NYC!
+
+Send	1
+InMail
+
+Overview
+
+At	1
+Merge,	1
+revolutionize	1
+B2B	2
+integrate.	1
+Unfamiliar	1
+integration	1
+problem?	1
+average	1
+expects	1
+spend	1
+year	4
+integrating	2
+dozens	1
+vendors.	1
+Alignment	1
+partnerships,	1
+management,	3
+(a	1
+lot,	1
+right?)	1
+absolutely	1
+—	2
+headache.	1
+Integrations	1
+to-do	1
+goes	1
+on.
+
+
+
+
+Our	1
+Unified	1
+integrations	1
+platforms	1
+instantly.	1
+Now	1
+you:	2
+ambitious	1
+build,	2
+enterprise-grade	1
+scaled	1
+users.
+
+
+
+
+Are	1
+redefining	1
+how	7
+future?	1
+Apply	1
+now!
+
+Responsibilities
+
+-	1
+Participate	1
+roadmapping	1
+discussions
+
+-	1
+Produce	1
+high-quality,	1
+production-ready,	1
+code
+
+-	1
+Lead	2
+initial	1
+inception	1
+production
+
+-	1
+Unblock	1
+peers	1
+operators
+
+Experience
+
+-	1
+2+	1
+(4+	1
+preferred)
+
+-	1
+(React,	2
+Vue.js,	1
+etc.)
+
+Benefits
+
+-	1
+Unlimited	1
+holidays
+
+-	1
+covered	2
+insurance
+
+-	1
+401K	2
+Plan
+
+-	1
+$200	1
+one-time	1
+home	3
+stipend
+
+-	1
+Free	1
+dinner	1
+past	1
+7pm
+
+Merge	1
+employer,	1
+discriminate	6
+class.	1
+tens	2
+Roblox	5
+play,	2
+learn,	2
+work,	4
+socialize	2
+immersive	2
+created	2
+community.	2
+
+Our	1
+enables	3
+shared	3
+among	2
+billions	2
+users.	2
+what’s	2
+known	2
+metaverse:	2
+persistent	2
+space	2
+anyone	2
+just	5
+imagine,	2
+anywhere	4
+device.	2
+breadth	2
+opportunities,	3
+evolving	3
+demands	2
+first-of-its-kind	2
+platform,	4
+avenues	2
+expanding	2
+flexible.
+
+Join	2
+you’ll	9
+usher	2
+category	2
+human	2
+interaction	3
+won’t	2
+else.
+
+Every	1
+community.
+
+Our	1
+else.
+
+As	1
+team,	3
+Infra	2
+creators	1
+everyday.
+
+You	1
+Are
+
+Experienced,	1
+3+	1
+class	1
+apps
+Hands-On	1
+particularly	1
+React/Redux,	1
+NextJS
+Passionate	1
+optimizing	1
+apps,	1
+continuously	2
+better
+Comfortable	1
+WebPack,	1
+Lighthouse,	1
+NPM	2
+ones	1
+workflow
+Experienced	1
+D3	1
+plus
+Invested	1
+tests,	3
+E2E	1
+auto-optimizations
+A	1
+member,	1
+self	1
+starter,	1
+adaptable
+
+You	1
+Might	1
+Be
+
+Experienced	1
+APIs;	1
+REST	1
+GraphQL	1
+consuming	1
+services
+Interested	1
+designers
+Already	1
+TypeScript/Flow	1
+last	3
+years
+
+You	1
+Will
+
+Build	1
+Own	1
+Creators	1
+platform
+Drive	1
+powers	2
+Creator	1
+products
+Introduce	1
+Grasshopper,	1
+private	1
+repository	1
+JS/TS	1
+code
+Collaborate	1
+engineers
+
+You'll	1
+Love
+
+Unique	1
+annual	1
+cliff
+A	1
+combined	1
+on-campus	1
+days
+Excellent	1
+coverage
+A	2
+rewarding	2
+401k	2
+program
+Bonding	1
+Leave	1
+benefits
+Flexible	1
+policy
+Free	2
+catered	3
+lunches	3
+five	2
+times	2
+week	2
+several	2
+snackrooms
+Onsite	1
+fitness	5
+center	2
+credit
+Annual	2
+CalTrain	2
+Go	2
+Pass
+A	2
+Admin	2
+badge	2
+avatar
+
+You'll	1
+Love
+
+Excellent	1
+program
+Flexible	1
+unlimited	2
+snacks
+Onsite	1
+avatar	1
+EY,	1
+chance	2
+unique	4
+are,	1
+version	1
+you.	1
+counting	1
+voice	3
+perspective	1
+EY	5
+better,	2
+too.	1
+yourself,	1
+all.	2
+
+EY	1
+assurance,	2
+tax,	1
+transaction	1
+advisory	1
+services.	2
+heart	2
+EY.	2
+services	2
+innovation	2
+organization.
+
+Fueled	1
+strategic	1
+investment	1
+Client	2
+robust	1
+engine	1
+vital	1
+scale.	1
+Technology,	1
+technologists	1
+blending	1
+EY’s	1
+ideas	1
+capabilities,	1
+expertise.	1
+catalyst	1
+growth,	1
+emerging	3
+Analytics	1
+corner	1
+learning	5
+choices,	1
+impact.
+
+The	1
+opportunity
+
+The	1
+selected	1
+will:
+
+be	1
+portion	1
+stories	1
+scrum	1
+team
+collaborate	1
+lead,	1
+suggestions	1
+direction	1
+team
+
+
+Your	1
+Key	1
+Responsibilities
+
+Hands-on	1
+Development	2
+Position	1
+70%	1
+coding
+Provide	1
+Level	1
+Effort	1
+estimates	1
+requirements
+Track	1
+tasks,	1
+status	5
+tasks	2
+completed	1
+schedule
+Troubleshoot	1
+resolutions
+Contribute	1
+healthy	2
+“Get	1
+Done”	1
+ethic
+A	1
+commitment	1
+excellence,	1
+practices,	1
+improvement	1
+products,	1
+base,	1
+tools
+Provide	1
+tasks
+Coordinate	1
+goals
+
+
+Skills	1
+Attributes	1
+Success
+Strong	1
+competency	1
+developing,	1
+executing	1
+solutions
+Strong	1
+of:	1
+JavaScript
+Digital	1
+Accessibility	1
+Non-Functional	1
+Requirements:
+Keyboard	1
+Access	1
+Visual	1
+Focus:	1
+content	4
+functionality	2
+should	31
+keyboard.	1
+Keyboard	2
+visible	1
+follow	1
+logical	1
+order	2
+elements.
+Page	1
+Title	2
+Language:	1
+title	1
+adequately	1
+briefly	1
+describe	1
+different	4
+pages	1
+website.	1
+Primary	1
+changes	1
+indicated.
+Headings:	1
+heading.	1
+It	1
+marked	1
+correctly	1
+heading	2
+hierarchy	1
+meaningful.
+Images:	1
+alt	2
+markup.	1
+conveys	1
+useful,	1
+needs	1
+alternative	1
+text.	2
+decorative,	1
+null	1
+(alt="").
+Contrast,	1
+Color,	1
+Appearance:	1
+contrast	1
+ratio	1
+4.5:1	1
+normal-size	1
+Color	1
+alone	1
+convey	1
+information.
+Resizing,	1
+Magnification,	1
+Responsiveness:	1
+Users	1
+enlarge	1
+content.	2
+responsive.
+Links,	1
+Buttons,	1
+Controls,	1
+Navigation,	1
+Skip	1
+Link:	1
+Links,	1
+buttons	1
+controls	2
+recognizable	1
+coded	1
+correctly.	1
+Clear	1
+consistent	3
+navigation	2
+provided.	1
+skip	2
+allows	1
+available.
+Forms,	1
+Labels,	1
+Errors:	1
+Forms	1
+keyboard	1
+accessible.	1
+Form	1
+labels.	1
+Required	1
+fields	1
+instructions	1
+indicated.	1
+Error	1
+handing	1
+simple.
+Tables	1
+Lists:	1
+Tables	1
+markup	1
+indicates	1
+header	1
+cells	2
+defines	1
+relationship.	1
+List	1
+list	1
+content.
+Multimedia	1
+(Audio	1
+Video),	1
+Animation,	1
+Moving	1
+content:	1
+Captions/subtitles,	1
+transcript,	1
+audio	2
+description	1
+provided	1
+appropriately	1
+media.	1
+media	1
+player	1
+controls,	1
+animations,	1
+carousels	1
+available.
+Structure,	1
+Meaning,	1
+Reading	2
+Order,	1
+Global	1
+Code:	1
+Content	1
+well-structured	1
+allow	2
+processing.	1
+Mark-up	1
+headings,	1
+lists,	1
+tables,	1
+etc.	1
+structure	1
+reflected	1
+order.
+Touch:	1
+Touch	1
+interactions	3
+supported.	1
+When	1
+phone	2
+scope,	1
+supported.
+
+To	1
+qualify	1
+role,	1
+have
+
+Bachelor’s	1
+field	1
+experience
+10+	2
+Angular	1
+experience
+7+	2
+development
+10+	1
+HTML5	1
+experience
+Familiarity	1
+Design	8
+Patterns
+A	1
+grasp	1
+concepts	1
+Responsive	1
+Design,	2
+Progressive	1
+Enhancement,	1
+Adaptive	1
+Rendering,	1
+Minimal	1
+Download	1
+Strategy
+Strong	1
+optimization	1
+techniques
+Experience	1
+Agile	2
+Methodologies	1
+SCRUM
+Strong	1
+object	1
+oriented	1
+articulate	1
+designs	2
+UML	1
+diagrams
+Due	1
+nature	1
+required
+Self-driven	1
+stay	1
+abreast	1
+current	2
+trends
+Proven	1
+thrive	1
+under	3
+pressure
+
+
+Ideally,	1
+have
+
+SASS	1
+LESS
+Mobile	1
+Development
+View.js
+D3.js
+
+
+What	1
+Look	1
+For
+
+A	1
+self-starter,	1
+independent-thinker,	1
+curious	1
+creative	2
+ambition	1
+passion
+
+
+What	1
+Offer
+
+We	1
+compensation	2
+package	3
+rewarded	1
+recognized	2
+business.	1
+addition,	1
+Total	2
+Rewards	2
+coverage,	1
+pension	1
+plans,	1
+wide	2
+off	2
+options.	1
+Under	1
+policy,	1
+decide	1
+personal	2
+circumstances.	1
+You’ll	4
+granted	1
+designated	1
+Holidays,	1
+Winter/Summer	1
+breaks,	1
+Personal/Family	1
+Care,	1
+leaves	1
+absence	1
+physical,	1
+financial,	1
+emotional	1
+well-being.
+
+Continuous	1
+learning:	1
+mindset	2
+navigate	1
+whatever	1
+comes	1
+next.
+Success	1
+defined	1
+We’ll	2
+impact,	1
+way.
+Transformative	1
+leadership:	1
+insights,	1
+coaching	1
+needs.
+Diverse	1
+culture:	1
+embraced	1
+empowered	1
+others	2
+theirs.
+
+
+If	1
+demonstrate	1
+criteria	2
+above,	1
+soon	1
+possible.
+
+The	1
+experience.	1
+yours	1
+build.
+
+EY	1
+Building	1
+world
+
+EY	1
+world,	1
+long-term	1
+trust	3
+markets.
+
+Enabled	1
+technology,	2
+assurance	1
+grow,	2
+operate.
+
+Working	1
+consulting,	1
+law,	1
+strategy,	1
+tax	1
+transactions,	1
+ask	2
+answers	3
+today.
+
+EY	1
+opportunity,	1
+affirmative	1
+action	1
+identity/expression,	1
+basis,	1
+accordance	1
+law.	4
+Engineers	4
+Gather	6
+increasing	1
+power	5
+utility	1
+sure	2
+intuitive	1
+novices,	1
+never	1
+played	1
+Pokemon.	1
+gaps	1
+intuitions,	1
+React.	1
+constantly	2
+finding	3
+client,	1
+mapmaker,	1
+dashboard,	1
+everything	2
+else	1
+usability.	1
+After	1
+all,	1
+FE	1
+you're	1
+site	1
+actually	2
+useful	1
+intuitive.	1
+Tens	1
+thousands	1
+(and	2
+counting)	1
+depend	1
+it!
+Help	1
+interconnected	1
+worlds,	1
+remotely,	1
+spatial	1
+network!
+Where	1
+Will	1
+Make	1
+An	1
+Impact
+
+Collaborate	1
+scope	1
+directions
+Participate	1
+architecture
+Build	1
+customize	1
+personalize	1
+maps
+Write	1
+maintainable,	2
+well-architected	1
+code,	1
+documentation
+Create	1
+natural	1
+component	4
+spaces	3
+friends	1
+hang	1
+later
+What	1
+bring:
+
+Experience	1
+Redux
+A	1
+intuition	1
+beautiful,	1
+usable	2
+interfaces
+Intrinsic	1
+motivation	1
+difficult	1
+guidance
+Ability	1
+ruthlessly	1
+prioritize	1
+chaotic	1
+ambiguous	1
+environment
+Excellent	1
+interpersonal	2
+skills
+An	1
+receiving	1
+feedback
+
+About	1
+Us
+We	1
+virtual	4
+universe	1
+fundamentally	1
+improves	1
+online.
+Today,	1
+remote-social	1
+platform.	1
+attending	1
+conferences	1
+going	1
+campus	1
+.	1
+folks	2
+hosting	1
+magic	1
+conventions	1
+artist	1
+EP	1
+launches	1
+thanksgiving	1
+dinners	1
+weddings	1
+.
+The	1
+remove	1
+physical	4
+peoples'	2
+lives,	1
+surpasses	1
+interconnectedness,	1
+touch,	1
+expressiveness.
+How's	1
+far?
+In	1
+months,	1
+we've	2
+gone	1
+nothing	1
+views	1
+month,	1
+>1	1
+million	2
+spaces,	1
+numerous	1
+running	2
+clock.	1
+"Pokemon	1
+x	1
+Zoom	1
+thing"	1
+calling	1
+didn't	1
+missing.
+Joining	1
+jumping	1
+fast-moving	1
+train	1
+you'll	1
+plenty	1
+agency	1
+early-stage	1
+changing	1
+These	1
+unsolved,	1
+ended	1
+tons	1
+room	1
+need)	1
+creativity.	1
+Help	1
+level!
+Benefits
+
+Work	1
+state-of-the-art	1
+!
+Competitive	1
+compensation,	1
+benefits,	1
+equity
+Comprehensive	1
+dependents
+401k	1
+matching	1
+program
+Generous	1
+mental	4
+days
+Work-from-home	1
+equipment	2
+stipend
+Meal	1
+stipend	1
+twice	2
+week
+The	1
+lives	1
+day
+
+Gather	1
+Town	1
+equitable	1
+feel	2
+everyday.	1
+Qualified	1
+ethnicity,	1
+perception	1
+pregnancy	1
+prohibited	1
+Additionally,	1
+disabilities	2
+employment.	1
+participate	2
+process,	1
+essential	2
+functions,	1
+privileges	1
+employment,	1
+let	1
+HR@gather.town.	1
+voluntary	2
+demographic	1
+inclusivity	1
+efforts	1
+programs.	1
+Answering	1
+entirely	1
+decision.	1
+Overview	1
+
+Position	1
+Summary
+
+As	1
+annotation	1
+marking	1
+audio,	1
+images,	1
+data
+
+types	1
+models.	1
+users,	1
+fixing	1
+bugs	1
+as
+
+necessary	1
+improving	1
+codebase.
+
+Responsibilities
+
+Build	1
+Appen’s	1
+self-serving	1
+APIs,	2
+dashboards,	1
+reports.
+Create	1
+prototypes,	1
+MVP	1
+production	4
+software.
+Technical	1
+initiatives,	1
+assist	1
+definition	1
+direction
+Define,	1
+troubleshoot,	1
+multi-tier	1
+applications.
+Work	1
+manager,	1
+management	4
+operation	1
+application
+
+features.
+
+Estimate	1
+effort,	1
+plan	4
+execution	1
+cycles,	1
+rollout	1
+changes.
+Support	1
+AWS
+
+Qualifications
+
+Excellent	1
+CSS.
+5+	1
+commercial	3
+applications.
+2+	1
+Ruby	3
+Rails	1
+framework.
+1+	1
+platform.
+1+	1
+React/Redux	1
+setup.
+Proficiency	1
+command	1
+line	2
+Chrome	1
+Tools.
+Experience	1
+Git,	1
+Docker,	1
+Jira,	1
+Confluence.
+Assertive	1
+"get	1
+things	2
+done"	1
+attitude.
+
+Position	1
+Senior	2
+Engineer
+
+Career	1
+Level
+
+Division	1
+Engineering
+
+Department/Family	1
+ADAP	1
+Engineering
+
+Reports	1
+Grzegorz	1
+Biesiadecki,	1
+Snior	1
+Manager,	1
+Engineering
+
+Location	1
+Remote
+
+Senior	1
+Engineer
+
+August	1
+27,	1
+appen.com
+
+Excellent	1
+skills,	2
+verbal	2
+English	1
+Named	1
+Forbes	1
+Fintech	1
+row,	1
+Marqeta	4
+payment	2
+apps	2
+daily.	1
+issuing	1
+API,	1
+analytics	1
+unprecedented	1
+control	1
+issue	1
+cards,	1
+authorize	1
+transactions	2
+manage	1
+real-time.	1
+
+We	1
+problems.	1
+possibilities	1
+together	3
+rewards	1
+creativity	1
+perseverance.
+
+Marqeta	1
+Oakland	1
+roots	1
+markets	1
+serve,	1
+staying	1
+values:	1
+Connect	1
+Customer,	1
+Everyone	1
+Belongs,	1
+Cares,	1
+Innovation,	1
+Deliver	1
+Results,	1
+Quality	1
+First	2
+Build	2
+One	1
+Marqeta.	2
+expecting	1
+listed	2
+below,	1
+apply.	1
+It's	1
+well.
+
+Position	1
+Summary
+
+Design,	1
+develop,	1
+implement,	1
+Marqeta’s	1
+customers.
+Make	1
+simple,	1
+ourselves.	1
+Develop	1
+scalable,	2
+manual	1
+financial	1
+industry.
+Prioritize	1
+ship	1
+team’s	1
+roadmap	1
+effectively.
+Uplift	1
+presence.	1
+Mentor	1
+drawing	1
+thoughtful	1
+direction.
+Apply	1
+implementations.
+
+Primary	1
+Responsibilities
+
+Conceptualize	1
+designers
+Collaborate	1
+APIs
+Build	1
+world-class,	1
+browsers
+Work	1
+gorgeous,	1
+functional	2
+experiences
+Learn	1
+problems
+
+Requirements
+
+2+	1
+engineer
+You're	1
+afraid	1
+fundamentals	1
+experience
+Mastery	1
+HTML/CSS,	1
+extensive	1
+interfaces
+Experience	1
+React
+Experience	1
+JSON	1
+GraphQL/Apollo	1
+plus
+Able	1
+results
+
+Bonus	1
+points	2
+for
+
+Experience	1
+multiple	5
+frameworks
+Experience	1
+CI	1
+pipeline	1
+cloud	2
+services
+
+Perks
+
+Rich	1
+suite	1
+benefit	1
+plans;	1
+premiums	1
+100%
+Flexible	1
+Off
+Full	1
+Parental	1
+Leave
+Pet	1
+insurance
+401k	1
+match
+Competitive	1
+pay
+Meaningful	1
+equity
+Monthly	1
+stipend
+Bi-annual	1
+“Hack	1
+Week”	1
+reward	1
+innovation
+Open,	1
+transparent	1
+Hands	1
+Lunch-and-Learns,	1
+all-company	1
+offsites,	1
+etc.
+Access	1
+corporate	1
+membership	1
+rates,	1
+discounts	2
+perks
+Fully	1
+kitchen,	1
+week,	1
+breakfast	1
+Fridays	1
+more!
+
+As	1
+dedication	2
+workforce,	1
+Employment	1
+creed,	1
+origin	1
+condition,	1
+marital/domestic	1
+military	1
+legally-recognized	1
+federal,	3
+laws,	1
+ordinances.	1
+EAB	6
+
+At	2
+smarter	2
+communities	2
+stronger.	2
+harness	1
+collective	1
+1,900	1
+schools,	1
+colleges,	1
+universities	1
+uncover	1
+proven	1
+insights.	1
+multifaceted	1
+solutions,	1
+differently	1
+customized	1
+blend	1
+research,	1
+kindergarten	1
+college	1
+beyond,	1
+partners	2
+leaders,	1
+practitioners,	1
+staff	1
+progress	1
+results	1
+three	1
+areas:	1
+enrollment	1
+student	1
+success,	1
+institutional	1
+strategy.
+
+At	1
+EAB,	2
+institutions	1
+other—that's	1
+why	4
+invested	2
+See	1
+checking	1
+recent	1
+awards	1
+.
+
+For	1
+visit	1
+Careers	1
+page.
+
+The	1
+Role	1
+Brief
+
+Software	1
+Front-end	2
+Focused
+
+As	1
+superb	1
+feed	1
+two-week	1
+release	1
+high-quality	2
+provides	1
+mentorship	1
+paths	2
+advancement.
+
+This	1
+remote.
+
+Primary	1
+Responsibilities
+
+Aid	1
+taxonomies,	1
+standards,	1
+patterns,	1
+cases	2
+applications
+Collaborate	1
+product,	5
+common	2
+goals
+Self-start	1
+steward	1
+implementations	1
+ensuring	1
+champion	1
+standards	3
+challenge
+Follow	1
+sustainable	1
+methodologies
+Perform	1
+source	1
+presentation	1
+layer	1
+defects
+Solve	1
+classical	1
+science	1
+problems
+At	1
+times,	1
+desired	1
+basis
+
+Basic	1
+Qualifications
+
+Passion	1
+performant	2
+applications
+2+	1
+experience
+Bachelor's	1
+experience
+Expertise	1
+HTML
+Experience	2
+test	2
+Jest,	2
+Jasmine,	1
+Mocha,	1
+etc.
+Understanding	1
+SDLC	1
+product
+This	1
+busy	1
+one.	1
+Self-driven	1
+hard	1
+must!
+Thorough,	1
+methodical,	1
+solver,	1
+extreme	1
+attention	2
+detail
+Extremely	1
+skills.	1
+email,	1
+IM,	1
+phone,	1
+person.
+Excellent	1
+skills
+Expert	1
+independently
+
+Ideal	1
+Qualifications
+
+Expertise	1
+Material-UI,	1
+JavaScript
+Experience	1
+traditional	1
+architecture
+Experience	1
+object-oriented,	1
+functional,	1
+declarative,	1
+imperative	1
+programming
+Experience	1
+development
+Knowledge	1
+basic	1
+architecture
+Knowledge	1
+AWS	1
+Lambda,	1
+Node.js,	1
+Kotlin	1
+Java,	1
+SQL
+
+Benefits
+
+Consistent	1
+belief	1
+valuable	1
+resource,	1
+package.
+
+Medical,	1
+insurance;	1
+dependents	1
+eligible
+401(k)	1
+match
+20+	1
+days	1
+annually,	1
+holidays
+Daytime	1
+leave	2
+month	1
+each)
+Paid	1
+birthing	1
+non-birthing	1
+parents
+Phase	1
+Back	1
+Work	2
+returning	1
+leave
+Infertility	1
+treatment	1
+coverage	2
+adoption	1
+surrogacy	1
+assistance
+Wellness	1
+programs	1
+incentives	1
+promote	1
+living
+Dynamic	1
+merit-based	1
+promotion	1
+philosophy
+Benefits	1
+kick	1
+one,	1
+details	1
+here.
+
+At	1
+fulfill	1
+“make	1
+stronger”	1
+table	1
+valued,	1
+respected	1
+heard.
+
+To	1
+Employer,	1
+merit	1
+need.	1
+non-disqualifying	1
+appropriate	1
+law.
+
+	1
+that’s	1
+missing	2
+trade.	1
+Stedi,	1
+pieces	1
+infrastructure:	1
+trading	2
+trillions	1
+exchanged	1
+Earth.
+
+We	1
+developer-focused	1
+do.	1
+globally-distributed	1
+growing.	1
+aim	1
+stellar	1
+careers.	1
+Learn	2
+Stedi	1
+Standards	1
+.
+
+Stedi	1
+raised	1
+$71	1
+funding	1
+Stripe,	1
+Addition,	1
+USV,	1
+Round	1
+Capital.
+
+Stedi	1
+experienced	2
+team.	1
+customer-facing	1
+supported	1
+(product,	1
+back-end).
+
+What	1
+Do
+
+Craft	1
+experiences
+Develop	1
+responsive,	1
+accessible	1
+semantic	1
+components
+Collaborate	1
+interfaces	1
+features
+Design	1
+dynamically-generated	1
+editors	1
+detail	1
+pages
+Use	1
+broadest-reaching	1
+lowest	1
+price	1
+customers
+
+Who	1
+Are
+
+5+	1
+tech-forward,	1
+company
+Solid	1
+testing,	1
+css-in-js)
+Advanced	1
+JavaScript/TypeScript
+Experience	1
+deployment	1
+environments
+Strong	1
+bridge	1
+gap	1
+engineering
+An	1
+contributor	1
+creates	1
+executes	1
+work
+Highly	1
+curious;	1
+satisfied	1
+getting	1
+works	3
+quality
+
+What	1
+offer
+
+Compensation
+
+Top	1
+market	1
+pay
+
+Competitive	1
+package
+
+401(k)	1
+(US	2
+employees)
+
+Wellness
+
+Medical,	1
+insurance,	3
+employees)
+
+Unlimited	1
+frequent	1
+away)
+
+Virtual	1
+environment
+
+Work	1
+(buy	1
+need)
+
+Internet	1
+bill	1
+coverage
+
+Daily	1
+food	1
+stipend
+
+Book	1
+reimbursement
+
+Stedi	1
+employer.	3
+state,	1
+Us	1
+
+Coalition	1
+cybersecurity	2
+risk	1
+brings	1
+threat	1
+expertise,	1
+remain	1
+resilient	1
+cyber	2
+threats.	1
+Together	1
+centered	1
+goal:	1
+harnessing	1
+first	1
+holistic	1
+risk.
+
+Our	1
+failures,	1
+mitigate	1
+recover	1
+occur.	1
+catching	1
+on.	1
+Coalition	3
+currently	1
+42,000	1
+insured	1
+$12	1
+collaboratively	1
+North	1
+America	1
+Europe.
+
+Founded	1
+2017,	1
+tremendous	1
+remaining	1
+values.	1
+That’s	2
+named	1
+Inc’s	1
+Best	1
+Places	1
+2021.
+
+About	1
+Role
+
+You’ll	1
+contributing	1
+components,	2
+packaging	1
+configurations	1
+records.	1
+stakeholders	2
+threads	1
+mobile.	1
+developer.mozilla.org	1
+bookmarked	1
+rarely	1
+load	1
+dev	2
+keep	1
+caching	1
+disabled.
+
+Responsibilities
+
+Build	1
+components
+Work	1
+cross	1
+break	1
+down	1
+actionable	1
+plans
+Collaborate	1
+Site	1
+Reliability	1
+(SRE)	1
+repeatable,	1
+stable	1
+joyful	1
+lifecycle
+Develop	1
+uphold	1
+excellence
+Make	1
+unseen,	1
+unforeseen	1
+items	1
+along	1
+way
+
+
+Skills	1
+Qualifications
+
+Computer	1
+discipline	1
+experience
+2+	1
+hands-on	1
+SPAs,	1
+interactive	1
+years,	1
+miles!
+Experience	1
+SPAs	1
+TypeScript	1
+hi-fi	1
+mockups
+Analyzing	1
+errors	1
+Sentry,	1
+DataDog,	1
+Jaeger/Zipkin,	1
+GreyLog,	1
+App	1
+Dynamics
+Competent	1
+git	1
+GitHub	1
+environment
+Proficiency	1
+managing	1
+scale
+Working	1
+(Atlassian	1
+Suite,	1
+GitHub,	1
+GitLab)
+Experience	1
+DOM	1
+APIs
+
+
+Bonus	1
+Points
+
+Experience	1
+transport	1
+formats	1
+(JSON/REST,	1
+GraphQL,	1
+Protobufs/gRPC)
+History	1
+multi-package	1
+Lerna	1
+Yarn	1
+workspaces
+Experience	1
+configuring	1
+(Webpack,	1
+ESLint	1
+Jest)
+Prior	1
+fintech	1
+insuretech	1
+experience
+
+
+Why	1
+Coalition?
+
+Coalition's	1
+strongly	1
+humility,	1
+authenticity,	1
+diversity.	1
+backgrounds	1
+life,	3
+responsibility,	1
+another.	1
+collaborative,	1
+inquisitive	1
+team.
+
+Recent	1
+press	1
+releases:
+
+Coalition	1
+Raises	1
+$175M	1
+Future	1
+Commercial	1
+Insurance
+
+Forbes.com	1
+Next	1
+Billion-Dollar	1
+Startups	1
+2020
+
+Coalition	1
+Affirmative	1
+Action	1
+upon	1
+sex	2
+(including	2
+pregnancy,	2
+childbirth,	2
+conditions),	2
+transgender	1
+stereotypes,	1
+veteran,	1
+characteristics.
+
+	1
+
+Jeremy	1
+McHugh
+
+Chief	1
+Officer	1
+Co-Founder	1
+Preamble
+
+Send	1
+InMail
+
+The	1
+Preamble	3
+ESG	1
+(Environmental,	1
+Social,	1
+Governance)	1
+principles	1
+safe	1
+ethical.	1
+mission-aligned	1
+full-time Frontend	1
+Engineer.	1
+society. 
+
+
+
+
+Responsibilities: 
+
+Developing	1
+website	1
+architecture
+Designing	1
+pages
+Enhance	1
+browser	2
+extension
+Ensuring	1
+cross-platform	1
+phones
+Seeing	1
+conception	1
+finished	1
+product
+Debugging	1
+Testing
+
+
+
+
+Strong	1
+following: 
+
+Bachelor’s	1
+similar	1
+field
+Experience	1
+applications
+Experience	1
+languages	1
+Javascript
+High	1
+versioning/collaboration	1
+(Git,	1
+Github)
+UI/UX	1
+identifying	1
+validating	1
+metrics
+Experience	1
+participating	1
+products
+Experience	1
+platforms
+Have	1
+extensions	1
+browsers
+
+
+
+
+Benefits: 
+
+Competitive	1
+salary
+Equity 
+Non-elective	1
+contribution
+Paid	1
+vision
+Flexible	1
+hours
+
+
+
+
+Preamble	1
+aligned	1
+tackle	1
+affect	1
+generations	1
+come.	1
+further	1
+ethics	1
+foundation	1
+operate.	1
+journey	2
+forward! 
+
+
+
+
+Preamble	1
+workforce.	1
+
+Tom	1
+Pollock	1
+Headhunter	1
+2nd
+
+Partner	1
+Oliver	1
+Parks	1
+I	1
+Salesforce/eCommerce	1
+Technical	1
+Functional	1
+professionals	1
+US!
+
+Send	1
+InMail
+
+Our	1
+super	1
+cool	3
+Saas/Tech	1
+sales	1
+came	1
+from!
+
+ 
+
+Very	1
+SaaS	2
+popular/trendy	1
+vertical	1
+tracking	1
+sales.
+Technology	1
+EVERY	1
+“tech	1
+side”	1
+regardless	1
+position,	1
+PM	1
+invest	1
+you.
+Small	1
+(35	1
+people)	1
+heard,	1
+gets	1
+other.
+Excellent	1
+newbies	1
+efficiently
+ Our	1
+client's	2
+marketing	1
+growing	1
+base	1
+businesses.
+
+
+
+
+Very	1
+NYC	1
+Miami	1
+US.
+
+
+
+
+4+	1
+React
+With	1
+solid	1
+framework
+HTML5	1
+CSS3	1
+pixel	1
+implementation
+Interface	1
+architect	1
+problems
+Understanding	1
+client-server	1
+design
+
+
+
+
+Other	1
+perks:
+
+
+
+
+Great	1
+benefits:	1
+401(k)
+Flexible	1
+hours
+Plenty	1
+sessions
+Kitchen	1
+coffee/tea,	1
+beer,	1
+Systems	2
+group	1
+whose	1
+empower	1
+cohesive	1
+possible.	1
+modularizing,	1
+upgrading	1
+front-end.	1
+
+What’s	1
+fascinating	1
+Engineers!	1
+Half	1
+Designers	1
+development.	1
+extremely	1
+cross-functional	2
+consumed	1
+entire	1
+product.
+
+If	1
+respects	1
+intersection	1
+Engineering,	1
+influence	1
+team!
+
+About	1
+Gusto
+
+Gusto	1
+teams.	1
+On	1
+full-service	1
+payroll,	1
+Gusto	5
+401(k)s,	1
+expert	1
+HR,	1
+tools.	1
+Today,	1
+Denver,	1
+100,000	1
+nationwide.
+
+Our	1
+Gusto.	1
+workplace,	1
+physically	1
+virtually.	1
+philosophy.
+
+At	1
+Gusto,	1
+businesses,	2
+laser-focused	1
+it.	1
+System	1
+operates	1
+data-driven	1
+becoming	1
+customer.
+
+Here’s	1
+What	2
+Do	1
+Day-to-day
+
+Build	1
+library
+Work	1
+documentation	2
+limited	1
+React
+Write	1
+design-system	1
+use
+Build	1
+product
+Develop	1
+accessibility	1
+Gusto’s	2
+improves
+Make	1
+infrastructure
+Champion	1
+modularity,	1
+performance
+Design	1
+advocacy	1
+evangelize	1
+practices
+
+Here’s	1
+Looking	1
+For
+
+4+	1
+role
+Strong	1
+history	1
+non-technical	1
+teams
+Experience	1
+composable,	1
+flexible,	1
+well-documented
+Highly	1
+proficient	1
+TypeScript
+Experience	1
+Rails
+Familiar	1
+trends	1
+development,	1
+various	1
+approaches	1
+styling	1
+(CSS	1
+Modules,	1
+CSS-in-JS,	1
+Sass,	1
+etc.),	1
+(Material	1
+UI,	1
+Carbon,	1
+Polaris,	1
+Lightning),	1
+(Figma,	1
+Sketch),	1
+(such	1
+Storybook)
+Strong	1
+detail
+Passionate	1
+because	3
+importance	1
+accessibility
+
+Our	1
+amount	1
+targeted	1
+$136,00/yr	1
+$187,000/yr	1
+Denver	1
+locations,	1
+$170,000/yr	1
+$234,000/yr	1
+York.	1
+Final	1
+determined	1
+factors	1
+above.
+
+Our	1
+walks	1
+we.	1
+variety	1
+it's	1
+do,	1
+enthusiasm	1
+Gusto.
+
+Gusto	1
+characteristic.	1
+considers	1
+criminal	1
+histories,	1
+disabled	1
+veterans	1
+procedures.	1
+assistance	1
+due	1
+accommodations@gusto.com.
+
+	1

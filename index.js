@@ -9,7 +9,7 @@ const PAST_WEEK_EXPANDED_URL =
 	"https://www.linkedin.com/jobs/search/?f_E=1%2C2%2C3%2C4&f_TPR=r604800&geoId=90000084&keywords=%22front%20end%22%20developer%20OR%20%22frontend%22%20developer%20OR%20%22front%20end%22%20engineer%20OR%20%22frontend%22%20engineer&location=San%20Francisco%20Bay%20Area&locationId=&sortBy=R";
 
 const PAST_WEEK_NYC_URL =
-    "https://www.linkedin.com/jobs/search/?f_E=1%2C2%2C3%2C4&f_TPR=r604800&geoId=90000070&keywords=%22front%20end%22%20developer%20OR%20%22frontend%22%20developer%20OR%20%22front%20end%22%20engineer%20OR%20%22frontend%22%20engineer&location=New%20York%20City%20Metropolitan%20Area&locationId=&sortBy=R";
+	"https://www.linkedin.com/jobs/search/?f_E=1%2C2%2C3%2C4&f_TPR=r604800&geoId=90000070&keywords=%22front%20end%22%20developer%20OR%20%22frontend%22%20developer%20OR%20%22front%20end%22%20engineer%20OR%20%22frontend%22%20engineer&location=New%20York%20City%20Metropolitan%20Area&locationId=&sortBy=R";
 const PAST_MONTH_URL =
 	"https://www.linkedin.com/jobs/search/?f_E=1%2C2&f_TPR=r2592000&geoId=90000084&keywords=%22front%20end%22%20developer%20OR%20%22frontend%22%20developer%20OR%20%22front%20end%22%20engineer%20OR%20%22frontend%22%20engineer&location=San%20Francisco%20Bay%20Area&locationId=&sortBy=R";
 
@@ -96,7 +96,7 @@ async function textExtractor() {
 			.getAttribute("href");
 
 	const description = document
-		.querySelector('article[class="jobs-description__container m4"]')
+		.querySelector(".jobs-box__html-content.jobs-description-content__text")
 		.innerText.replace("\n", " ");
 
 	return [company, location, datePosted, title, url, description];
@@ -157,9 +157,26 @@ function scrollToBottom() {
 	});
 }
 
+function generateWordMap(postingDescriptions) {
+	const output = {};
+
+	postingDescriptions.forEach((description) => {
+		description.split(" ").forEach((word) => {
+			if (output.hasOwnProperty(word)) {
+				output[word] += 1;
+			} else {
+				output[word] = 1;
+			}
+		});
+	});
+
+	return output;
+}
+
 // Main function that will iterate through pages and scrapes postings per page
 async function scrapePostings(browser, page, textExtractor) {
 	const validPostings = [];
+	const postingDescriptions = [];
 
 	// ----------------- repaste into original code after done
 	// const postingsLinks = await page.evaluate(grabPostingLinks);
@@ -298,6 +315,7 @@ async function scrapePostings(browser, page, textExtractor) {
 					await page.evaluate(textExtractor);
 
 				// 2d. Run a regex on the extracted text to decide whether you should filter it into the final validPostings
+				// Removed
 
 				// 2e. Check for available alumnis
 				const availableAlumni = await page.evaluate(() => {
@@ -329,6 +347,8 @@ async function scrapePostings(browser, page, textExtractor) {
 					connections: availableAlumni ? "yes" : "no",
 				});
 
+				postingDescriptions.push(description);
+
 				// 2g. Run a wait timer in order to prevent a 429 error
 				await page.waitForTimeout(postingClickDelay);
 			}
@@ -359,7 +379,12 @@ async function scrapePostings(browser, page, textExtractor) {
 		console.log(e);
 	}
 
-	return validPostings;
+	// wordMap is an object of words
+	// Uncomment this out and replace wordMap = {};
+	// const wordMap = generateWordMap(postingDescriptions);
+	wordMap = {};
+
+	return [validPostings, wordMap];
 }
 
 (async () => {
@@ -371,14 +396,19 @@ async function scrapePostings(browser, page, textExtractor) {
 
 	await Promise.all([
 		page.setViewport({ width: 1440, height: 1000 }),
-		page.goto(PAST_WEEK_NYC_URL),
+		page.goto(PAST_WEEK_EXPANDED_URL),
 	]);
 
 	// Signing in
 	await signIn(page);
 
 	// Scrape
-	const validPostings = await scrapePostings(browser, page, textExtractor);
+	const [validPostings, wordMap] = await scrapePostings(
+		browser,
+		page,
+		textExtractor
+	);
+
 	console.log("validPostings: ", validPostings);
 
 	const formattedPostings = validPostings.map((post) => {
@@ -395,6 +425,16 @@ async function scrapePostings(browser, page, textExtractor) {
 
 		return `${experienceMet}\t${experienceRequired}\t${company}\t${title}\t${location}\t${datePosted}\t${url}\t${connections}`;
 	});
+
+	// const formattedWordMap = Object.keys(wordMap).map((key) => {
+	// 	return `${key}\t${wordMap[key]}`;
+	// });
+
+	// Print wordMap
+	// fs.writeFile("./wordMap.txt", formattedWordMap.join("\n"), (e) => {
+	// 	if (e) return console.log(e);
+	// 	console.log("WordMap successfully written");
+	// });
 
 	// Print Results
 	fs.writeFile("./output.txt", formattedPostings.join("\n"), (e) => {
