@@ -38,8 +38,6 @@ async function signIn(page) {
 	const [signInLink] = await page.$x("/html/body/div[1]/header/nav/div/a[2]");
 	await Promise.all([signInLink.click(), page.waitForNavigation()]);
 
-	// Replace username & password with your actual username and password.
-	// NEVER UPLOAD TO GITHUB WITH THESE ACTUALLY IN THERE
 	await page.type("#username", process.env.LI_USER, { delay: 60 });
 	await page.type("#password", process.env.LI_PASS, { delay: 60 });
 
