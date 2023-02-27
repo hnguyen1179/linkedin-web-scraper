@@ -400,9 +400,11 @@ async function scrapePostings(browser, page, textExtractor) {
 	]);
 
 	// Signing in
+	console.log("Signing in");
 	await signIn(page);
 
 	// Scrape
+	console.log("Initate scraping");
 	const [validPostings, wordMap] = await scrapePostings(
 		browser,
 		page,
