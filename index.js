@@ -157,113 +157,10 @@ function scrollToBottom() {
 	});
 }
 
-function generateWordMap(postingDescriptions) {
-	const output = {};
-
-	postingDescriptions.forEach((description) => {
-		description.split(" ").forEach((word) => {
-			if (output.hasOwnProperty(word)) {
-				output[word] += 1;
-			} else {
-				output[word] = 1;
-			}
-		});
-	});
-
-	return output;
-}
-
 // Main function that will iterate through pages and scrapes postings per page
 async function scrapePostings(browser, page, textExtractor) {
 	const validPostings = [];
 	const postingDescriptions = [];
-
-	// ----------------- repaste into original code after done
-	// const postingsLinks = await page.evaluate(grabPostingLinks);
-	// console.log(postingsLinks);
-
-	// // 1a. Scrolling to the bottom in order to preload all the titles
-	// await page.evaluate(scrollToBottom);
-	// await page.waitForTimeout(Math.random() * 500 + 1000);
-
-	// // 2. Iterate through the postings and extract information from each
-	// for (let id of postingsLinks) {
-	//     // 2a. Check to see if the posting title includes 'front', etc. If no, skip
-	//     const jobTitle = await page.evaluate((id) => {
-	//         return document.querySelector(
-	//             `li[data-occludable-entity-urn='${id}'] .job-card-list__title`
-	//         ).innerText;
-	//     }, id);
-
-	//     if (titleFilter(jobTitle)) {
-	//         continue;
-	//     }
-
-	//     const postingClickDelay = Math.floor(Math.random() * 600) + 500;
-
-	//     // 2b. Click on each individual li element within the ul job postings
-	//     await Promise.all([
-	//         page.click(`li[data-occludable-entity-urn='${id}']`),
-	//         page.waitForNavigation(),
-	//         page.waitForTimeout(400),
-	//         page.waitForSelector(".mt5.mb2", { visible: true }),
-	//     ]);
-
-	//     // 2c. Extract the information from each link; this can be separate function to grab the title, body, etc within a single function
-	//     const [company, title, location, datePosted, url, description] =
-	//         await page.evaluate(textExtractor);
-
-	//     // 2d. Run a regex on the extracted text to decide whether you should filter it into the final validPostings
-
-	//     // 2e. Check for available alumnis
-	//     const availableAlumni = await page.evaluate(() => {
-	//         return (
-	//             /people/.test(document.querySelector(".mt5.mb2").innerHTML) &&
-	//             [...document.querySelectorAll(".mt5.mb2 .app-aware-link")]
-	//                 .map((x) => x.getAttribute("href"))
-	//                 .filter((x) => /schoolFilter/.test(x)).length > 0
-	//         );
-	//     });
-
-	//     let availableConnections = [];
-	//     if (availableAlumni) {
-	//         const [connectionsLink] = await page.evaluate(getConnectionsLink);
-
-	//         // Opens a new tab
-	//         const newPage = await browser.newPage();
-
-	//         // Go to the link provided in the new tab
-	//         await Promise.all([
-	//             newPage.setViewport({ width: 1440, height: 1000 }),
-	//             newPage.goto(connectionsLink),
-	//             newPage.waitForNavigation(),
-	//             newPage.waitForSelector(
-	//                 ".reusable-search__entity-results-list"
-	//             ),
-	//             { visible: true },
-	//         ]);
-
-	//         availableConnections = await newPage.evaluate(grabConnectionLinks);
-
-	//         newPage.close();
-	//     }
-
-	//     // 2f. Push into valid postings
-	//     validPostings.push({
-	//         experienceMet: experienceFilter(description)[0] ? "yes" : "no",
-	//         experienceRequired: experienceFilter(description)[1],
-	//         company,
-	//         title,
-	//         location,
-	//         datePosted,
-	//         url,
-	//         availableConnections,
-	//     });
-
-	//     // 2g. Run a wait timer in order to prevent a 429 error
-	//     await page.waitForTimeout(postingClickDelay);
-	// }
-	// -----------------
 
 	try {
 		let nextPage = 1;
@@ -379,12 +276,7 @@ async function scrapePostings(browser, page, textExtractor) {
 		console.log(e);
 	}
 
-	// wordMap is an object of words
-	// Uncomment this out and replace wordMap = {};
-	// const wordMap = generateWordMap(postingDescriptions);
-	wordMap = {};
-
-	return [validPostings, wordMap];
+	return [validPostings];
 }
 
 (async () => {
@@ -405,7 +297,7 @@ async function scrapePostings(browser, page, textExtractor) {
 
 	// Scrape
 	console.log("Initate scraping");
-	const [validPostings, wordMap] = await scrapePostings(
+	const [validPostings] = await scrapePostings(
 		browser,
 		page,
 		textExtractor
@@ -427,16 +319,6 @@ async function scrapePostings(browser, page, textExtractor) {
 
 		return `${experienceMet}\t${experienceRequired}\t${company}\t${title}\t${location}\t${datePosted}\t${url}\t${connections}`;
 	});
-
-	// const formattedWordMap = Object.keys(wordMap).map((key) => {
-	// 	return `${key}\t${wordMap[key]}`;
-	// });
-
-	// Print wordMap
-	// fs.writeFile("./wordMap.txt", formattedWordMap.join("\n"), (e) => {
-	// 	if (e) return console.log(e);
-	// 	console.log("WordMap successfully written");
-	// });
 
 	// Print Results
 	fs.writeFile("./output.txt", formattedPostings.join("\n"), (e) => {
