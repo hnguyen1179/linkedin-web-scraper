@@ -25,14 +25,6 @@ function grabPostingLinks() {
 	].map((li) => li.getAttribute("data-occludable-entity-urn"));
 }
 
-function grabConnectionLinks() {
-	return [
-		...document.querySelectorAll(
-			".entity-result__title-text a.app-aware-link"
-		),
-	].map((x) => x.getAttribute("href"));
-}
-
 // Signs into LinkedIn
 async function signIn(page) {
 	const [signInLink] = await page.$x("/html/body/div[1]/header/nav/div/a[2]");
@@ -110,12 +102,6 @@ function titleFilter(title) {
 		);
 
 	return ![test1, test2].every((test) => test === true);
-}
-
-function getConnectionsLink() {
-	return [...document.querySelectorAll(".mt5.mb2 .app-aware-link")]
-		.map((x) => x.getAttribute("href"))
-		.filter((x) => /schoolFilter/.test(x));
 }
 
 // Filters job postings to exclude invalid job postings. Checks for years of experience required
