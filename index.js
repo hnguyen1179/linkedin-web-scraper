@@ -95,7 +95,9 @@ async function textExtractor() {
 }
 
 function titleFilter(title) {
-  const test1 = /front|ui|web developer/i.test(title);
+  // Includes
+  const test1 = /front|ui|web|developer/i.test(title);
+  // Doesn't Include
   const test2 =
     !/senior|staff|sr|lead|mid|angular|vue|ii|iii|years|java[^s]|full/i.test(
       title
@@ -178,7 +180,7 @@ async function scrapePostings(browser, page, textExtractor) {
         // 2a. Check to see if the posting title includes 'front', etc. If no, skip
         const jobTitle = await page.evaluate((id) => {
           return document.querySelector(
-            `li[data-occludable-entity-urn='${id}'] .job-card-list__title`
+            `li[data-occludable-job-id='${id}'] .job-card-list__title`
           ).innerText;
         }, id);
 
@@ -190,7 +192,7 @@ async function scrapePostings(browser, page, textExtractor) {
 
         // 2b. Click on each individual li element within the ul job postings
         await Promise.all([
-          page.click(`li[data-occludable-entity-urn='${id}']`),
+          page.click(`li[data-occludable-job-id='${id}']`),
           page.waitForNavigation(),
           page.waitForSelector(".mt5.mb2", { visible: true }),
         ]);
