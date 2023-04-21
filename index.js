@@ -8,6 +8,9 @@ const PAST_WEEK_URL =
 const PAST_WEEK_EXPANDED_URL =
   "https://www.linkedin.com/jobs/search/?f_E=1%2C2%2C3%2C4&f_TPR=r604800&geoId=90000084&keywords=%22front%20end%22%20developer%20OR%20%22frontend%22%20developer%20OR%20%22front%20end%22%20engineer%20OR%20%22frontend%22%20engineer&location=San%20Francisco%20Bay%20Area&locationId=&sortBy=R";
 
+const PAST_WEEK_EXPANDED_URL_NYC =
+  "https://www.linkedin.com/jobs/search/?currentJobId=3573942568&f_E=1%2C2%2C3%2C4&f_TPR=r604800&geoId=90000070&keywords=%22front%20end%22%20developer%20OR%20%22frontend%22%20developer%20OR%20%22front%20end%22%20engineer%20OR%20%22frontend%22%20engineer&location=New%20York%20City%20Metropolitan%20Area&refresh=true&sortBy=R";
+
 const PAST_WEEK_NYC_URL =
   "https://www.linkedin.com/jobs/search/?f_E=1%2C2%2C3%2C4&f_TPR=r604800&geoId=90000070&keywords=%22front%20end%22%20developer%20OR%20%22frontend%22%20developer%20OR%20%22front%20end%22%20engineer%20OR%20%22frontend%22%20engineer&location=New%20York%20City%20Metropolitan%20Area&locationId=&sortBy=R";
 const PAST_MONTH_URL =
@@ -79,7 +82,7 @@ async function textExtractor() {
 
   const title = document
     .querySelector(".t-24.t-bold.jobs-unified-top-card__job-title")
-    .innerText.trim()
+    .innerText.trim();
 
   const url =
     "https://www.linkedin.com" +
@@ -210,9 +213,9 @@ async function scrapePostings(browser, page, textExtractor) {
 
         // 2e. Check for available alumnis
         const availableAlumni = await page.evaluate(() => {
-          return (
-            /connection|school alumni/.test(document.querySelector(".mt5.mb2").innerText)
-          )
+          return /connection|school alumni/.test(
+            document.querySelector(".mt5.mb2").innerText
+          );
         });
 
         // 2f. Push into valid postings
@@ -268,10 +271,11 @@ async function scrapePostings(browser, page, textExtractor) {
   });
 
   const page = await browser.newPage();
+  await page.setDefaultNavigationTimeout(0);
 
   await Promise.all([
     page.setViewport({ width: 1440, height: 1000 }),
-    page.goto(PAST_WEEK_EXPANDED_URL),
+    page.goto(PAST_WEEK_EXPANDED_URL_NYC),
   ]);
 
   // Signing in
