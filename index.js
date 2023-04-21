@@ -2,24 +2,10 @@ require("dotenv").config({ path: __dirname + "/.env" });
 const fs = require("fs");
 const puppeteer = require("puppeteer");
 
-const PAST_WEEK_URL =
-  "https://www.linkedin.com/jobs/search?keywords=%22Front%20End%22%20Developer%20OR%20%22Frontend%22%20Developer%20OR%20%22Front%20End%22%20Engineer%20OR%20%22Frontend%22%20Engineer&location=San%20Francisco%20Bay%20Area&locationId=&geoId=90000084&sortBy=R&f_TPR=r604800&f_E=1%2C2&position=1&pageNum=0";
-
-const PAST_WEEK_EXPANDED_URL =
-  "https://www.linkedin.com/jobs/search/?f_E=1%2C2%2C3%2C4&f_TPR=r604800&geoId=90000084&keywords=%22front%20end%22%20developer%20OR%20%22frontend%22%20developer%20OR%20%22front%20end%22%20engineer%20OR%20%22frontend%22%20engineer&location=San%20Francisco%20Bay%20Area&locationId=&sortBy=R";
-
 const PAST_WEEK_EXPANDED_URL_NYC =
   "https://www.linkedin.com/jobs/search/?currentJobId=3573942568&f_E=1%2C2%2C3%2C4&f_TPR=r604800&geoId=90000070&keywords=%22front%20end%22%20developer%20OR%20%22frontend%22%20developer%20OR%20%22front%20end%22%20engineer%20OR%20%22frontend%22%20engineer&location=New%20York%20City%20Metropolitan%20Area&refresh=true&sortBy=R";
-
-const PAST_WEEK_NYC_URL =
-  "https://www.linkedin.com/jobs/search/?f_E=1%2C2%2C3%2C4&f_TPR=r604800&geoId=90000070&keywords=%22front%20end%22%20developer%20OR%20%22frontend%22%20developer%20OR%20%22front%20end%22%20engineer%20OR%20%22frontend%22%20engineer&location=New%20York%20City%20Metropolitan%20Area&locationId=&sortBy=R";
-const PAST_MONTH_URL =
-  "https://www.linkedin.com/jobs/search/?f_E=1%2C2&f_TPR=r2592000&geoId=90000084&keywords=%22front%20end%22%20developer%20OR%20%22frontend%22%20developer%20OR%20%22front%20end%22%20engineer%20OR%20%22frontend%22%20engineer&location=San%20Francisco%20Bay%20Area&locationId=&sortBy=R";
-
-// TO DO:
-/**
- * 1. MAKE LOOKING THROUGH CONNECTIONS WORK; ITS NOT HITTING A CERTAIN PART ON LINE 214
- */
+const PAST_MONTH_EXPANDED_URL_NYC =
+  "https://www.linkedin.com/jobs/search/?currentJobId=3575207879&f_E=1%2C2%2C3%2C4&f_TPR=r2592000&geoId=90000070&keywords=%22front%20end%22%20developer%20OR%20%22frontend%22%20developer%20OR%20%22front%20end%22%20engineer%20OR%20%22frontend%22%20engineer&location=New%20York%20City%20Metropolitan%20Area&refresh=true&sortBy=R";
 
 // This function grabs the id of each job posting
 function grabPostingIDs() {
