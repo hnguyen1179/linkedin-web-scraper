@@ -64,7 +64,7 @@ async function textExtractor() {
   }
 
   let company = document.querySelector(
-    ".jobs-unified-top-card__subtitle-primary-grouping.mr2.t-black > span > a"
+    ".jobs-unified-top-card__company-name > a"
   );
   if (company) company = company.innerText.trim();
 
@@ -78,8 +78,8 @@ async function textExtractor() {
   const datePosted = dateConverter(sincePosted);
 
   const title = document
-    .querySelector('h2[class="t-24 t-bold"]')
-    .innerText.trim();
+    .querySelector(".t-24.t-bold.jobs-unified-top-card__job-title")
+    .innerText.trim()
 
   const url =
     "https://www.linkedin.com" +
@@ -89,7 +89,7 @@ async function textExtractor() {
 
   const description = document
     .querySelector(".jobs-box__html-content.jobs-description-content__text")
-    .innerText.replace("\n", " ");
+    .innerText.replace(new RegExp(/\n+/g), " ");
 
   return [company, location, datePosted, title, url, description];
 }
@@ -153,7 +153,7 @@ async function scrapePostings(browser, page, textExtractor) {
     console.log("Entering try clause");
     let nextPage = 1;
 
-    // checkCondition is a button element for the next page. Loop will run if there is a next page! 
+    // checkCondition is a button element for the next page. Loop will run if there is a next page!
     let checkCondition = await page.evaluate((nextPage) => {
       let condition = document.querySelector(
         `button[aria-label="Page ${nextPage}"]`
@@ -184,13 +184,15 @@ async function scrapePostings(browser, page, textExtractor) {
           ).innerText;
         }, id);
 
+        // Filters job titles for senior/incompatible roles. If it fails this by returning true, continue to the next loop iteration
         if (titleFilter(jobTitle)) {
           continue;
         }
 
+        // Click delay is added to simulate a real user so you don't get flagged, but also helps for slower connections
         const postingClickDelay = Math.floor(Math.random() * 600) + 500;
 
-        // 2b. Click on each individual li element within the ul job postings
+        // Click on each individual li element within the ul job postings and wait for all the information to load
         await Promise.all([
           page.click(`li[data-occludable-job-id='${id}']`),
           page.waitForNavigation(),
@@ -209,11 +211,8 @@ async function scrapePostings(browser, page, textExtractor) {
         // 2e. Check for available alumnis
         const availableAlumni = await page.evaluate(() => {
           return (
-            /people/.test(document.querySelector(".mt5.mb2").innerHTML) &&
-            [...document.querySelectorAll(".mt5.mb2 .app-aware-link")]
-              .map((x) => x.getAttribute("href"))
-              .filter((x) => /schoolFilter/.test(x)).length > 0
-          );
+            /connection|school alumni/.test(document.querySelector(".mt5.mb2").innerText)
+          )
         });
 
         // 2f. Push into valid postings
