@@ -130,7 +130,7 @@ function experienceFilter(description) {
 }
 
 function scrollToBottom() {
-  const scrollable = document.querySelector(".scaffold-layout__list-container");
+  const scrollable = document.querySelector(".jobs-search-results-list");
 
   const heightToScroll = document.querySelector(
     ".scaffold-layout__list-container"
