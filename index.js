@@ -99,7 +99,7 @@ async function textExtractor() {
 
 function titleFilter(title) {
   // Includes
-  const test1 = /front|ui|web|developer/i.test(title);
+  const test1 = /front|ui|web developer/i.test(title);
   // Doesn't Include
   const test2 =
     !/senior|staff|sr|lead|mid|angular|vue|ii|iii|years|java[^s]|full/i.test(
@@ -174,7 +174,7 @@ async function scrapePostings(browser, page, textExtractor) {
 
       // 1a. Scrolling to the bottom in order to preload all the titles
       await page.evaluate(scrollToBottom);
-      await page.waitForTimeout(Math.random() * 500 + 1000);
+      await page.waitForTimeout(Math.random() * 800 + 1000);
 
       console.log(postingsLinks);
       // 2. Iterate through the postings and extract information from each
@@ -193,12 +193,11 @@ async function scrapePostings(browser, page, textExtractor) {
         }
 
         // Click delay is added to simulate a real user so you don't get flagged, but also helps for slower connections
-        const postingClickDelay = Math.floor(Math.random() * 600) + 500;
+        const postingClickDelay = Math.floor(Math.random() * 600) + 700;
 
         // Click on each individual li element within the ul job postings and wait for all the information to load
         await Promise.all([
           page.click(`li[data-occludable-job-id='${id}']`),
-          page.waitForNavigation(),
           page.waitForSelector(".mt5.mb2", { visible: true }),
         ]);
 
