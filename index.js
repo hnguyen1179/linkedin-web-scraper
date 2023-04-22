@@ -88,7 +88,7 @@ function titleFilter(title) {
   const test1 = /front|ui|web developer/i.test(title);
   // Doesn't Include
   const test2 =
-    !/senior|staff|sr|lead|mid|angular|vue|iii|years|java[^s]|full/i.test(
+    !/senior|founding|staff|sr|lead|mid|angular|vue|iii|years|java[^s]|full/i.test(
       title
     );
 
