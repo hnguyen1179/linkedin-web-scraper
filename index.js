@@ -88,7 +88,7 @@ function titleFilter(title) {
   const test1 = /front|ui|web developer/i.test(title);
   // Doesn't Include
   const test2 =
-    !/senior|staff|sr|lead|mid|angular|vue|ii|iii|years|java[^s]|full/i.test(
+    !/senior|staff|sr|lead|mid|angular|vue|iii|years|java[^s]|full/i.test(
       title
     );
 
@@ -168,9 +168,11 @@ async function scrapePostings(browser, page, textExtractor) {
         console.log("Looking at: ", id);
         // 2a. Check to see if the posting title includes 'front', etc. If no, skip
         const jobTitle = await page.evaluate((id) => {
-          return document.querySelector(
-            `li[data-occludable-job-id='${id}'] .job-card-list__title`
-          ).innerText;
+          return (
+            document.querySelector(
+              `li[data-occludable-job-id='${id}'] .job-card-list__title`
+            ).innerText || ""
+          );
         }, id);
 
         // Filters job titles for senior/incompatible roles. If it fails this by returning true, continue to the next loop iteration
@@ -190,7 +192,7 @@ async function scrapePostings(browser, page, textExtractor) {
         await page.waitForTimeout(500);
 
         // 2c. Extract the information from each link; this can be separate function to grab the title, body, etc within a single function
-        const [company, title, location, datePosted, url, description] =
+        const [company, location, datePosted, title, url, description] =
           await page.evaluate(textExtractor);
 
         // 2d. Run a regex on the extracted text to decide whether you should filter it into the final validPostings
@@ -260,7 +262,7 @@ async function scrapePostings(browser, page, textExtractor) {
 
   await Promise.all([
     page.setViewport({ width: 1440, height: 1000 }),
-    page.goto(PAST_WEEK_EXPANDED_URL_NYC),
+    page.goto(PAST_MONTH_EXPANDED_URL_NYC),
   ]);
 
   // Signing in
