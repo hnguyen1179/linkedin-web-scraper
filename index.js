@@ -85,7 +85,7 @@ async function textExtractor() {
 
 function titleFilter(title) {
   // Includes
-  const test1 = /front|ui|web developer/i.test(title);
+  const test1 = /front|ui|web developer|engineer|developer/i.test(title);
   // Doesn't Include
   const test2 =
     !/senior|founding|staff|sr|lead|mid|angular|vue|iii|years|java[^s]|full/i.test(
