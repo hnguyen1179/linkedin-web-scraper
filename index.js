@@ -2,12 +2,19 @@ require("dotenv").config({ path: __dirname + "/.env" });
 const fs = require("fs");
 const puppeteer = require("puppeteer");
 
+// Custom URL with filters set in place to the exact listings you'd like to scrape
 const PAST_WEEK_EXPANDED_URL_NYC =
   "https://www.linkedin.com/jobs/search/?currentJobId=3573942568&f_E=1%2C2%2C3%2C4&f_TPR=r604800&geoId=90000070&keywords=%22front%20end%22%20developer%20OR%20%22frontend%22%20developer%20OR%20%22front%20end%22%20engineer%20OR%20%22frontend%22%20engineer&location=New%20York%20City%20Metropolitan%20Area&refresh=true&sortBy=R";
 const PAST_MONTH_EXPANDED_URL_SF =
   "https://www.linkedin.com/jobs/search/?currentJobId=92340729&f_E=1%2C2%2C3%2C4&f_TPR=r2592000&geoId=90000084&keywords=%22front%20end%22%20developer%20OR%20%22frontend%22%20developer%20OR%20%22front%20end%22%20engineer%20OR%20%22frontend%22%20engineer&location=San%20Francisco%20Bay%20Area&refresh=true&sortBy=R";
 const PAST_MONTH_EXPANDED_URL_NYC =
   "https://www.linkedin.com/jobs/search/?currentJobId=3575207879&f_E=1%2C2%2C3%2C4&f_TPR=r2592000&geoId=90000070&keywords=%22front%20end%22%20developer%20OR%20%22frontend%22%20developer%20OR%20%22front%20end%22%20engineer%20OR%20%22frontend%22%20engineer&location=New%20York%20City%20Metropolitan%20Area&refresh=true&sortBy=R";
+
+const LINKS = {
+  PAST_MONTH_EXPANDED_URL_NYC,
+  PAST_WEEK_EXPANDED_URL_NYC,
+  PAST_MONTH_EXPANDED_URL_SF,
+};
 
 // This function grabs the unique id of each job posting
 function grabPostingIDs() {
@@ -252,7 +259,7 @@ async function scrapePostings(browser, page, textExtractor) {
 
   await Promise.all([
     page.setViewport({ width: 1440, height: 1000 }),
-    page.goto(PAST_MONTH_EXPANDED_URL_SF),
+    page.goto(LINKS.PAST_MONTH_EXPANDED_URL_SF),
   ]);
 
   // Signing in
