@@ -4,10 +4,12 @@ const puppeteer = require("puppeteer");
 
 const PAST_WEEK_EXPANDED_URL_NYC =
   "https://www.linkedin.com/jobs/search/?currentJobId=3573942568&f_E=1%2C2%2C3%2C4&f_TPR=r604800&geoId=90000070&keywords=%22front%20end%22%20developer%20OR%20%22frontend%22%20developer%20OR%20%22front%20end%22%20engineer%20OR%20%22frontend%22%20engineer&location=New%20York%20City%20Metropolitan%20Area&refresh=true&sortBy=R";
+const PAST_MONTH_EXPANDED_URL_SF =
+  "https://www.linkedin.com/jobs/search/?currentJobId=92340729&f_E=1%2C2%2C3%2C4&f_TPR=r2592000&geoId=90000084&keywords=%22front%20end%22%20developer%20OR%20%22frontend%22%20developer%20OR%20%22front%20end%22%20engineer%20OR%20%22frontend%22%20engineer&location=San%20Francisco%20Bay%20Area&refresh=true&sortBy=R";
 const PAST_MONTH_EXPANDED_URL_NYC =
   "https://www.linkedin.com/jobs/search/?currentJobId=3575207879&f_E=1%2C2%2C3%2C4&f_TPR=r2592000&geoId=90000070&keywords=%22front%20end%22%20developer%20OR%20%22frontend%22%20developer%20OR%20%22front%20end%22%20engineer%20OR%20%22frontend%22%20engineer&location=New%20York%20City%20Metropolitan%20Area&refresh=true&sortBy=R";
 
-// This function grabs the id of each job posting
+// This function grabs the unique id of each job posting
 function grabPostingIDs() {
   return [
     ...document.querySelector(".scaffold-layout__list-container").children,
@@ -26,12 +28,6 @@ async function signIn(page) {
     "//*[@id='organic-div']/form/div[3]/button"
   );
   await Promise.all([signInButton.click(), page.waitForNavigation()]);
-
-  // Clicking on "Not Now"
-  // const [notNowLink] = await page.$x(
-  //     "//*[@id='remember-me-prompt__form-secondary']/button"
-  // );
-  // await Promise.all([notNowLink.click(), page.waitForNavigation()]);
 }
 
 // Extracts all the relevant information from a job posting
@@ -134,12 +130,10 @@ function scrollToBottom() {
 
 // Main function that will iterate through pages and scrapes postings per page
 async function scrapePostings(browser, page, textExtractor) {
-  console.log("Entering scrape function");
   const validPostings = [];
   const postingDescriptions = [];
 
   try {
-    console.log("Entering try clause");
     let nextPage = 1;
 
     // checkCondition is a button element for the next page. Loop will run if there is a next page!
@@ -152,7 +146,6 @@ async function scrapePostings(browser, page, textExtractor) {
 
     // Each loop will click through a new page
     while (!!checkCondition) {
-      console.log("In while loop");
       // Now you want to filter the list of ul job postings via grabPostingLinks
       // 1. Grab all of the li > div > a's href attributes into an array
       // ---------------------------------------------------------------------------
@@ -241,17 +234,14 @@ async function scrapePostings(browser, page, textExtractor) {
         ]);
       }
     }
-
-    console.log("Exiting try clause");
   } catch (e) {
-    console.log("Entering catch clause");
-    // Do something with error
     console.log(e);
   }
 
   return [validPostings];
 }
 
+// Main IIFE to run scraper
 (async () => {
   const browser = await puppeteer.launch({
     headless: false,
@@ -262,7 +252,7 @@ async function scrapePostings(browser, page, textExtractor) {
 
   await Promise.all([
     page.setViewport({ width: 1440, height: 1000 }),
-    page.goto(PAST_MONTH_EXPANDED_URL_NYC),
+    page.goto(PAST_MONTH_EXPANDED_URL_SF),
   ]);
 
   // Signing in
@@ -273,7 +263,7 @@ async function scrapePostings(browser, page, textExtractor) {
   console.log("Initate scraping");
   const [validPostings] = await scrapePostings(browser, page, textExtractor);
 
-  console.log("validPostings: ", validPostings);
+  console.log({ validPostings });
 
   const formattedPostings = validPostings.map((post) => {
     const {
